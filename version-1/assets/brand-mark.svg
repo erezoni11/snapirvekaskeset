@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 86">
+  <defs>
+    <linearGradient id="fin" x2=".9" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#082343"/><stop offset=".4" stop-color="#06799f"/><stop offset=".67" stop-color="#10c3e4"/><stop offset="1" stop-color="#003658"/>
+    </linearGradient>
+    <linearGradient id="body"><stop stop-color="#063a70"/><stop offset=".45" stop-color="#0284ad"/><stop offset=".72" stop-color="#20c9d2"/><stop offset="1" stop-color="#004568"/></linearGradient>
+    <linearGradient id="wave" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#74eff5"/><stop offset=".4" stop-color="#079fbe"/><stop offset=".65" stop-color="#00516f"/><stop offset="1" stop-color="#40e4ed"/></linearGradient>
+    <pattern id="scales" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(43)">
+      <path d="M0 0v3.5A3.5 3.5 0 0 0 3.5 7H7" fill="none" stroke="#03536f" stroke-width="1.1"/>
+      <path d="M2 2h1.5" stroke="#98fcf1" stroke-width=".9" stroke-linecap="round" opacity=".65"/>
+    </pattern>
+    <path id="lobe" d="M51 50C48 43 44 42 34 38 19 33 14 23 15 13c0-4 2-8 4-11-1 6 4 11 11 14 14 5 20 9 22 24z"/>
+    <path id="stem" d="M47 36c0 8 0 14-3 20-2 5-9 16-12 20 10-1 14 3 23 3 6 0 11-2 15-3-4-7-10-15-12-22-2-5-2-12 0-18-3 5-6 8-7 8-2-1-2-5-4-8z"/>
+  </defs>
+  <g fill="url(#fin)" stroke="#049bbf" stroke-width=".8">
+    <use href="#lobe"/><use href="#lobe" transform="translate(104) scale(-1 1)"/>
+  </g>
+  <use href="#stem" fill="url(#body)" stroke="#057493" stroke-width="1"/>
+  <use href="#stem" fill="url(#scales)" opacity=".86"/>
+  <g fill="none" stroke-linecap="round">
+    <g id="ribs">
+      <path d="M18 8c0 13 19 12 29 26l4 10M17 13c0 13 14 17 23 22l9 10M18 19c3 11 13 13 22 18l6 5" stroke="#74e7f5" stroke-width=".9"/>
+      <path d="M20 12c2 8 17 11 25 20l5 10M20 21c4 8 16 11 24 17" stroke="#073d69" stroke-width="1.35"/>
+    </g>
+    <use href="#ribs" transform="translate(104) scale(-1 1)"/>
+    <path d="M5 76c7 8 16-5 26-5 10-2 17 8 27 8 9 1 15-8 24-5 5 1 12 6 17 0-3 10-11 6-17 5-10-3-15 7-25 6-12 0-19-10-29-8-8 1-15 8-23-1z" fill="url(#wave)" stroke="#05758c" stroke-width=".75"/>
+    <path d="M9 78c8 1 16-6 23-5 10 0 17 9 26 8 8 0 15-7 24-5 5 1 10 4 15 1" stroke="#61e4ed" stroke-width=".85"/>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>סנפיר וקשקשת</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="search-icon" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="cart-icon" viewBox="0 0 24 24"><path d="M2 3h3l3 13h12M6 6h15l-2 7H7.4"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></symbol>
+    <symbol id="arrow-icon" viewBox="0 0 24 24"><path d="M22 12H3m0 0 7-7m-7 7 7 7"/></symbol>
+    <symbol id="knife-icon" viewBox="0 0 32 32"><path d="m4 27 7-8 4 4-8 7c-2 2-5-1-3-3Zm8-9C18 9 26 4 31 3c0 8-8 16-15 19Z"/></symbol>
+    <symbol id="delivery-icon" viewBox="0 0 42 32"><path d="M3 24V5h23v19M1 18v6h6m8 0h13m8 0h4v-8l-5-7h-9m4 3h4l3 5h-7zM14 7v12m-5-9 10 6m-10 0 10-6"/><circle cx="11" cy="24" r="4"/><circle cx="32" cy="24" r="4"/></symbol>
+    <symbol id="quality-icon" viewBox="0 0 32 36"><path d="m8 22-3 11 5-2 3 3 3-8 3 8 3-3 5 2-3-11M16 2l4 3 5 1 1 5 3 4-3 4-1 5-5 1-4 3-4-3-5-1-1-5-3-4 3-4 1-5 5-1Z"/><path d="m16 8 2 4 4 1-3 3v4l-3-2-4 2 1-4-3-3 4-1z"/></symbol>
+  </svg>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="#top"><img src="assets/logo.jpg" alt="סנפיר וקשקשת"></a>
+      <nav class="nav" aria-label="ניווט ראשי">
+        <a href="#shop">החנות</a>
+        <a href="#delivery">משלוחים</a>
+        <a href="#story">הסיפור שלנו</a>
+      </nav>
+      <div class="tools">
+        <button aria-label="חיפוש" type="button"><svg><use href="#search-icon"/></svg></button>
+        <button aria-label="סל קניות" type="button"><svg><use href="#cart-icon"/></svg></button>
+      </div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <picture class="hero-photo">
+          <source media="(max-width: 700px)" srcset="assets/hero-mobile.png">
+          <img src="assets/hero.png" alt="דג טרי על קרח כתוש">
+        </picture>
+        <div class="hero-copy">
+          <h1 id="headline">הטריות של הים,<br>אצלכם בבית</h1>
+          <svg class="wave" viewBox="0 0 110 14" aria-hidden="true"><path d="M0 4c32 17 64-16 110 7C71 0 32 26 0 4Z"/></svg>
+          <p>דגים ופירות ים טריים במשלוח עד הבית</p>
+          <a class="cta" href="#shop">לקנייה בחנות <svg><use href="#arrow-icon"/></svg></a>
+        </div>
+      </section>
+      <section class="categories" aria-labelledby="category-title">
+        <h2 class="rule" id="category-title">מה בא לכם להכין?</h2>
+        <div class="category-grid">
+          <a class="category whole" href="#bream"><span>דגים שלמים <svg><use href="#arrow-icon"/></svg></span></a>
+          <a class="category fillet" href="#salmon"><span>פילה דג <svg><use href="#arrow-icon"/></svg></span></a>
+          <a class="category seafood" href="#shrimp"><span>פירות ים <svg><use href="#arrow-icon"/></svg></span></a>
+        </div>
+      </section>
+      <section class="products" id="shop" aria-labelledby="products-title">
+        <h2 class="rule" id="products-title">הבחירות שלנו</h2>
+        <div class="product-grid">
+          <article class="product" id="salmon">
+            <picture>
+              <source media="(max-width: 700px)" srcset="assets/salmon-mobile.png">
+              <img src="assets/salmon.png" alt="פילה סלמון">
+            </picture>
+            <div class="product-details">
+              <h3>פילה סלמון</h3>
+              <bdi class="price" dir="ltr">₪69</bdi>
+              <select aria-label="משקל פילה סלמון"><option>500 גרם</option></select>
+              <button class="add" type="button">הוספה לסל</button>
+            </div>
+          </article>
+          <article class="product" id="bream">
+            <picture>
+              <source media="(max-width: 700px)" srcset="assets/bream-mobile.png">
+              <img src="assets/bream.png" alt="דניס שלם">
+            </picture>
+            <div class="product-details">
+              <h3>דניס שלם</h3>
+              <bdi class="price" dir="ltr">₪48</bdi>
+              <select aria-label="משקל דניס שלם"><option>500 גרם</option></select>
+              <button class="add" type="button">הוספה לסל</button>
+            </div>
+          </article>
+          <article class="product" id="shrimp">
+            <picture>
+              <source media="(max-width: 700px)" srcset="assets/shrimp-mobile.png">
+              <img src="assets/shrimp.png" alt="שרימפס נקי">
+            </picture>
+            <div class="product-details">
+              <h3>שרימפס נקי</h3>
+              <bdi class="price" dir="ltr">₪59</bdi>
+              <select aria-label="משקל שרימפס נקי"><option>500 גרם</option></select>
+              <button class="add" type="button">הוספה לסל</button>
+            </div>
+          </article>
+          <a class="delivery-tile" href="#delivery"><svg><use href="#delivery-icon"/></svg>משלוח בקירור</a>
+        </div>
+      </section>
+      <ul class="benefits" id="delivery" aria-label="טריות ומשלוחים">
+        <li><svg><use href="#quality-icon"/></svg><span>טריות באחריות</span></li>
+        <li><svg><use href="#delivery-icon"/></svg><span>משלוח בקירור</span></li>
+        <li><svg><use href="#knife-icon"/></svg><span>ניקוי לפי בקשה</span></li>
+      </ul>
+      <section class="story" id="story" aria-labelledby="story-title">
+        <picture>
+          <source media="(max-width: 700px)" srcset="assets/story-mobile.png">
+          <img src="assets/story.png" alt="דגים טריים על קרח בדלפק החנות">
+        </picture>
+        <div class="story-copy">
+          <h2 id="story-title">הסיפור שלנו</h2>
+          <svg class="wave" viewBox="0 0 110 14" aria-hidden="true"><path d="M0 4c32 17 64-16 110 7C71 0 32 26 0 4Z"/></svg>
+          <p>אנחנו בוחרים את הדגים בקפידה,<br class="desktop-break"> מנקים לפי בקשה ושולחים אליכם בקירור.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contact">
+      <a class="footer-brand" href="#top"><img src="assets/logo.jpg" alt="סנפיר וקשקשת"></a>
+      <nav aria-label="ניווט בתחתית העמוד">
+        <a href="#contact">שירות לקוחות</a>
+        <a href="#delivery">משלוחים</a>
+        <a href="#contact">יצירת קשר</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
