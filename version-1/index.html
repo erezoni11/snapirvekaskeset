@@ -87,6 +87,15 @@
 <small class="copyright">© 2025 סנפיר וקשקשת. כל הזכויות שמורות.</small>
 </footer>
 </div>
+<button class="cart-float" type="button" data-open-cart aria-haspopup="dialog" aria-controls="cart-drawer" aria-expanded="false" hidden>
+<svg class="icon" aria-hidden="true"><use href="#icon-cart"/></svg><span>לסל הקניות</span><span class="cart-float-count"></span><bdi class="cart-float-total"></bdi>
+</button>
+<dialog class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title">
+<header class="cart-heading"><h2 id="cart-title">סל הקניות שלי</h2><button class="cart-close" type="button" aria-label="סגירת סל הקניות" autofocus>×</button></header>
+<p class="cart-empty">סל הקניות ריק.</p><ul class="cart-items" aria-label="מוצרים בסל"></ul>
+<div class="cart-summary" hidden><span>סך הכול</span><bdi class="cart-total"></bdi></div>
+</dialog>
+<template id="cart-row"><li class="cart-item"><img alt=""><div class="cart-item-details"><strong></strong><span class="cart-weight"></span><div class="cart-controls"><button type="button" data-action="decrease">−</button><span class="cart-quantity"></span><button type="button" data-action="increase">+</button></div></div><div class="cart-item-end"><bdi></bdi><button class="cart-remove" type="button" data-action="remove">הסרה</button></div></li></template>
 <dialog id="panel"><form method="dialog"><button class="close" aria-label="סגירה">×</button></form><h2></h2><div class="panel-body"></div></dialog>
 <div class="toast" role="status"></div>
 </body></html>

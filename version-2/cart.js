@@ -37,6 +37,50 @@ function readCart() {
 }
 
 const cart = readCart();
+let closingTimer;
+let returnFocus;
+let savedScrollY = 0;
+let savedBodyStyle;
+
+function openCart() {
+  if (dialog.open) return;
+  clearTimeout(closingTimer);
+  dialog.classList.remove('is-closing');
+  returnFocus = document.activeElement;
+  savedScrollY = window.scrollY;
+  savedBodyStyle = document.body.getAttribute('style');
+  Object.assign(document.body.style, {
+    position: 'fixed', top: `-${savedScrollY}px`, width: '100%', overflow: 'hidden',
+  });
+  dialog.showModal();
+  document.querySelectorAll('[data-open-cart]').forEach(button => button.setAttribute('aria-expanded', 'true'));
+}
+
+function closeCart() {
+  if (!dialog.open || dialog.classList.contains('is-closing')) return;
+  dialog.classList.add('is-closing');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) dialog.close();
+  else closingTimer = setTimeout(() => dialog.close(), 240);
+}
+
+headingButton.addEventListener('click', event => {
+  event.preventDefault();
+  closeCart();
+});
+dialog.addEventListener('cancel', event => {
+  event.preventDefault();
+  closeCart();
+});
+dialog.addEventListener('close', () => {
+  clearTimeout(closingTimer);
+  dialog.classList.remove('is-closing');
+  if (savedBodyStyle === null) document.body.removeAttribute('style');
+  else document.body.setAttribute('style', savedBodyStyle);
+  window.scrollTo({ top: savedScrollY, behavior: 'instant' });
+  document.querySelectorAll('[data-open-cart]').forEach(button => button.setAttribute('aria-expanded', 'false'));
+  const target = returnFocus?.isConnected && !returnFocus.hidden ? returnFocus : document.querySelector('[data-open-cart]');
+  target?.focus({ preventScroll: true });
+});
 
 function setQuantity(id, quantity, message) {
   if (quantity > 99) {
@@ -81,6 +125,7 @@ function renderCart() {
     row.querySelector('bdi').textContent = currency.format(subtotal);
     row.querySelector('[data-action="decrease"]').setAttribute('aria-label', `הפחתת כמות של ${product.name}`);
     row.querySelector('[data-action="increase"]').setAttribute('aria-label', `הגדלת כמות של ${product.name}`);
+    row.querySelector('[data-action="increase"]').disabled = quantity >= 99;
     row.querySelector('[data-action="remove"]').setAttribute('aria-label', `הסרת ${product.name} מהסל`);
     if (id === focusedId) nextFocus = row.querySelector(`[data-action="${focusedAction}"]`);
     rows.append(row);
@@ -101,20 +146,27 @@ for (const [id, product] of products) {
     const wasEmpty = cart.size === 0;
     const quantity = (cart.get(id) || 0) + 1;
     setQuantity(id, quantity, `${product.name} נוסף לסל. כמות בסל: ${quantity}`);
-    if (wasEmpty) dialog.showModal();
+    if (wasEmpty) openCart();
   });
 }
 
 for (const button of document.querySelectorAll('[data-open-cart]')) {
-  button.addEventListener('click', () => dialog.showModal());
+  button.setAttribute('aria-expanded', 'false');
+  button.addEventListener('click', openCart);
 }
 
+let backdropPointer = false;
+dialog.addEventListener('pointerdown', event => {
+  const { left, right, top, bottom } = dialog.getBoundingClientRect();
+  backdropPointer = event.target === dialog && (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom);
+});
 dialog.addEventListener('click', (event) => {
   if (event.target !== dialog) return;
   const { left, right, top, bottom } = dialog.getBoundingClientRect();
-  if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
-    dialog.close();
+  if (backdropPointer && (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom)) {
+    closeCart();
   }
+  backdropPointer = false;
 });
 
 list.addEventListener('click', (event) => {
