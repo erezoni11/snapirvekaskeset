@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>סנפיר וקשקשת</title>
   <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
 </head>
 <body id="top">
   <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -25,7 +26,7 @@
       </nav>
       <div class="tools">
         <button aria-label="חיפוש" type="button"><svg><use href="#search-icon"/></svg></button>
-        <button aria-label="סל קניות" type="button"><svg><use href="#cart-icon"/></svg></button>
+        <button aria-label="סל קניות" type="button" data-open-cart aria-haspopup="dialog" aria-controls="cart"><svg><use href="#cart-icon"/></svg></button>
       </div>
     </header>
     <main>
@@ -52,7 +53,7 @@
       <section class="products" id="shop" aria-labelledby="products-title">
         <h2 class="rule" id="products-title">הבחירות שלנו</h2>
         <div class="product-grid">
-          <article class="product" id="salmon">
+          <article class="product" id="salmon" data-price="69">
             <picture>
               <source media="(max-width: 700px)" srcset="assets/salmon-mobile.png">
               <img src="assets/salmon.png" alt="פילה סלמון">
@@ -64,7 +65,7 @@
               <button class="add" type="button">הוספה לסל</button>
             </div>
           </article>
-          <article class="product" id="bream">
+          <article class="product" id="bream" data-price="48">
             <picture>
               <source media="(max-width: 700px)" srcset="assets/bream-mobile.png">
               <img src="assets/bream.png" alt="דניס שלם">
@@ -76,7 +77,7 @@
               <button class="add" type="button">הוספה לסל</button>
             </div>
           </article>
-          <article class="product" id="shrimp">
+          <article class="product" id="shrimp" data-price="59">
             <picture>
               <source media="(max-width: 700px)" srcset="assets/shrimp-mobile.png">
               <img src="assets/shrimp.png" alt="שרימפס נקי">
@@ -117,5 +118,42 @@
       </nav>
     </footer>
   </div>
+  <button class="cart-float" type="button" data-open-cart aria-haspopup="dialog" aria-controls="cart" hidden>
+    <svg aria-hidden="true"><use href="#cart-icon"/></svg>
+    <span>לסל הקניות</span>
+    <span class="cart-count"></span>
+    <bdi class="cart-float-total"></bdi>
+  </button>
+  <p class="cart-status" role="status"></p>
+  <dialog class="cart-dialog" id="cart" aria-labelledby="cart-title">
+    <header class="cart-heading">
+      <h2 id="cart-title">סל הקניות שלי</h2>
+      <form method="dialog"><button class="cart-close" aria-label="סגירת סל הקניות" autofocus>×</button></form>
+    </header>
+    <p class="cart-empty">הסל עדיין ריק.</p>
+    <ul class="cart-items" aria-label="מוצרים בסל"></ul>
+    <footer class="cart-summary" hidden>
+      <span>סך הכול</span>
+      <bdi class="cart-total"></bdi>
+    </footer>
+  </dialog>
+  <template id="cart-row">
+    <li class="cart-item">
+      <img alt="">
+      <div class="cart-item-details">
+        <strong></strong>
+        <span class="cart-weight"></span>
+        <div class="cart-controls">
+          <button type="button" data-action="decrease">−</button>
+          <span class="cart-quantity"></span>
+          <button type="button" data-action="increase">+</button>
+        </div>
+      </div>
+      <div class="cart-item-end">
+        <bdi></bdi>
+        <button class="cart-remove" type="button" data-action="remove">הסרה</button>
+      </div>
+    </li>
+  </template>
 </body>
 </html>
