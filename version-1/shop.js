@@ -77,6 +77,7 @@ function updateProducts() {
 function updateCart() {
   const count = Object.values(cart).reduce((sum, quantity) => sum + quantity, 0);
   document.querySelector('.cart-count').textContent = count;
+  document.querySelector('.cart-count').hidden = count === 0;
   document.querySelector('.cart').setAttribute('aria-label', 'סל הקניות, ' + count + ' יחידות');
   floatingCart.hidden = count === 0;
   document.body.classList.toggle('has-floating-cart', count > 0);

@@ -132,6 +132,11 @@ function renderCart() {
   }
 
   list.replaceChildren(rows);
+  const headerCart = document.querySelector('.tools [data-open-cart]');
+  const badge = headerCart.querySelector('.cart-badge');
+  badge.textContent = count;
+  badge.hidden = count === 0;
+  headerCart.setAttribute('aria-label', `סל הקניות, ${count} יחידות`);
   floatingButton.hidden = count === 0;
   floatingButton.querySelector('.cart-count').textContent = count;
   floatingButton.querySelector('.cart-float-total').textContent = currency.format(total);
