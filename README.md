@@ -2,6 +2,10 @@
 
 אתר חנות דגים ופירות ים, בעברית ובכיווניות מימין לשמאל.
 
+האתר ב־GitHub Pages: https://sarielh.github.io/snapir_vekaskeset/
+
+גרסה 1 מוצגת בדף הראשי. גרסה 2 זמינה בכתובת https://sarielh.github.io/snapir_vekaskeset/version-2/ . כל דחיפה לענף `main` מעדכנת את האתר אוטומטית באמצעות GitHub Actions.
+
 המאגר כולל את שתי הגרסאות בתיקיות `version-1` ו־`version-2`. לפתיחת כל גרסה, פתחו את קובץ `index.html` שבתיקייה המתאימה בדפדפן. אין צורך בהתקנת תלויות או בבנייה.
 
 האתר מבוסס על HTML ו-CSS, ובגרסה 1 גם JavaScript. בגרסה 1 סל הקניות והמועדפים נשמרים בדפדפן באמצעות localStorage.
