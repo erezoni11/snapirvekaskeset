@@ -10,6 +10,7 @@ for key in ['sea', 'pool', 'frozen', 'smoked', 'deli']:
     home = home.replace(f'href="#categories" data-category="{key}"', f'href="{key}.html" data-category="{key}"')
     home = home.replace(f'href="#products" class="category" data-filter="{key}"', f'href="{key}.html" class="category" data-filter="{key}"')
 home = home.replace('<span class="cart-count">3</span>', '<span class="cart-count" aria-live="polite">0</span>')
+home = re.sub(r'( aria-haspopup="dialog" aria-controls="cart-dialog")+', '', home)
 home = home.replace('class="icon-btn cart-btn" aria-label="סל קניות"', 'class="icon-btn cart-btn" aria-label="סל קניות" aria-haspopup="dialog" aria-controls="cart-dialog"')
 drawer = '''<dialog id="cart-dialog" class="cart-drawer" aria-labelledby="cart-title">
   <div class="drawer-shell">

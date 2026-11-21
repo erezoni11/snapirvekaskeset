@@ -2,6 +2,8 @@
 
 אתר חנות דגים ופירות ים, בעברית ובכיווניות מימין לשמאל.
 
+פאנל המנהלים: `admin.html`. לתצוגת הדגמה מקומית: http://localhost:3000/admin.html?demo=1 . להתקנת הדטאבייס, הגדרת מנהלים, הרשאות ובדיקות, ראו [מדריך הפעלת הפאנל](ADMIN-SETUP.md). תשתית הניהול עדיין דורשת הפעלה בפרויקט Supabase החי.
+
 האתר ב־GitHub Pages: https://sarielh.github.io/snapir_vekaskeset/
 
 האתר ב־Vercel: https://snapirvekaskeset.vercel.app (פריסה אוטומטית מהריפו `erezoni11/snapirvekaskeset`: דחיפה או merge ל־`main` מעדכנים את האתר, ודחיפה לענף אחר יוצרת כתובת Preview).
