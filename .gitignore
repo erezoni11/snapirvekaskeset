@@ -3,6 +3,16 @@ snapir-site.tar.gz
 node_modules/
 .env
 .env.*
-!.env.example
+.next/
+dist/
+build/
+.vscode/
+.idea/
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.pyc
 .DS_Store
 Thumbs.db

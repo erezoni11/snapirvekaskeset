@@ -26,7 +26,8 @@ jobs:
       - name: Prepare website
         run: |
           mkdir -p _site/version-1 _site/version-2
-          cp -a version-1/. _site/
+          cp *.html style.css script.js _site/
+          cp -a assets _site/assets
           cp -a version-1/. _site/version-1/
           cp -a version-2/. _site/version-2/
           touch _site/.nojekyll
