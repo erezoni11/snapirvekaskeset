@@ -32,6 +32,12 @@
     const nav=$('.navigation');if(nav){nav.replaceChildren(...categories.map(doc=>{const a=document.createElement('a');a.href=route(doc.slug);a.dataset.category=doc.slug;a.textContent=doc.data.title;if(category===doc.slug)a.setAttribute('aria-current','page');return a;}),...pages.filter(d=>d.data.show_menu).map(doc=>{const a=document.createElement('a');a.href='page.html?slug='+encodeURIComponent(doc.slug);a.textContent=doc.data.title;return a;}));}
     if(settings){
       window.storefrontSettings=settings;
+      const accessibilityContact=$('#accessibility-contact');
+      if(accessibilityContact){
+        accessibilityContact.replaceChildren();
+        if(settings.email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(settings.email)){const a=document.createElement('a');a.href='mailto:'+settings.email;a.textContent=settings.email;accessibilityContact.append(a);}
+        if(settings.phone&&/[0-9]/.test(settings.phone)){const a=document.createElement('a');a.href='tel:'+settings.phone.replace(/[^+0-9]/g,'');a.textContent=settings.phone;accessibilityContact.append(a);}
+      }
       const logo=$('.logo img');if(logo){logo.src=safeURL(settings.logo)||'assets/logo.png';logo.alt=settings.title||'סנפיר וקשקשת';}
       for(const [field,selector] of Object.entries({hero_title:'.hero h1',hero_subtitle:'.hero p',categories_heading:'.categories .heading span',products_heading:'.products>.heading span',delivery_title:'[data-delivery=delivery] strong',delivery_subtitle:'[data-delivery=delivery] small',pickup_title:'[data-delivery=pickup] strong',pickup_subtitle:'[data-delivery=pickup] small'}))text(selector,settings[field]);
       const cta=$('.hero-cta');if(cta&&settings.hero_cta){cta.replaceChildren(document.createTextNode(settings.hero_cta+' ←'));}
