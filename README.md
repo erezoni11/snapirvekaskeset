@@ -4,6 +4,8 @@
 
 האתר ב־GitHub Pages: https://sarielh.github.io/snapir_vekaskeset/
 
+האתר ב־Vercel: https://snapirvekaskeset.vercel.app (פריסה אוטומטית מהריפו `erezoni11/snapirvekaskeset`: דחיפה או merge ל־`main` מעדכנים את האתר, ודחיפה לענף אחר יוצרת כתובת Preview).
+
 העיצוב החדש מתוך `snapir-shop` מוצג בדף הראשי, עם התמונות והפונטים המקומיים. נוספו מגירת סל ועמודי קטגוריות באותו קו עיצובי. גרסה 1 וגרסה 2 נשמרו בתיקיות `version-1` ו־`version-2`. כל דחיפה לענף `main` מעדכנת את האתר אוטומטית באמצעות GitHub Actions.
 
 לפתיחת האתר, פתחו את `index.html` הראשי בדפדפן. אין צורך בהתקנת תלויות או בבנייה. להפעלה מקומית באמצעות Python, הריצו משורש המאגר `python -m http.server 3000 --bind 127.0.0.1` ופתחו את http://localhost:3000/ .
