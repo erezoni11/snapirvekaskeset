@@ -146,6 +146,19 @@ dialog .primary{padding:10px 18px;border-radius:8px}
 /* Shared desktop navigation, category pages and shopping drawer. */
 .site-footer{padding:24px 20px;text-align:center;background:var(--navy);color:#c5dfe8;border-top:3px solid var(--cyan);font-size:12px;line-height:1.8}
 .site-footer p{margin:3px 0}
+.managed-footer{margin-top:14px;font-size:12px;line-height:1.9}
+.managed-footer a{display:inline-block;margin:6px 10px;color:#fff;text-decoration:underline;text-underline-offset:4px}
+.store-preview-banner{position:sticky;top:0;z-index:15;text-align:center;background:#fff2ca;color:#6c571d;font-size:13px;padding:12px}
+.storefront-status{margin:18px 0;padding:13px 18px;background:#eff8fa;border-radius:9px;color:#426779;font-size:13px;line-height:1.8}
+.product-grid[aria-busy=true]{opacity:.5}
+.product[data-live] .product-image>img,.category[data-live] img{content:normal!important}
+.add-cart:disabled{background:#d9e3e8;color:#567283;cursor:default}
+html[data-catalog-source=supabase] .primary,html[data-catalog-source=preview] .primary{background:var(--cyan)}
+.content-page{padding:50px max(6cqw,20px) 70px;min-height:60vh}
+.content-page h1{font-size:clamp(32px,4cqw,62px);margin:25px 0 12px}
+.content-page h2{font-size:22px;line-height:1.8}
+.content-page>img{display:block;width:min(100%,800px);max-height:420px;object-fit:cover;border-radius:16px;margin:30px 0}
+#content-page-body{white-space:pre-wrap;line-height:2;font-size:18px;max-width:850px}
 .site-footer span{color:#fff;font-weight:700}
 [hidden]{display:none!important}
 @media(min-width:701px){
