@@ -53,4 +53,4 @@ for username in ('sariel','erez'):
         user=api('/auth/v1/admin/users','POST',{'email':email,'password':password,'email_confirm':True,'user_metadata':{'username':username}})
     api('/rest/v1/svk_staff?on_conflict=user_id','POST',{'user_id':user['id'],'display_name':username,'role':'admin','active':True},{'Prefer':'resolution=merge-duplicates,return=minimal'})
     print(f'Administrator ready: {username}')
-print('Done. Sign in at /admin.html. Password changes are available from the top bar.')
+print('Done. Sign in at /admin. Password changes are available from the top bar.')

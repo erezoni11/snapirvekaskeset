@@ -1,23 +1,70 @@
-# סנפיר וקשקשת
+# סנפיר וקשקשת — Next.js
 
-אתר חנות דגים ופירות ים, בעברית ובכיווניות מימין לשמאל.
+הגרסה המקומית הועברה ל־Next.js App Router ול־React. פריסת Next.js ותשתית ההזמנות אושרה במפורש ב־22 בנובמבר 2026. כל פריסה דורשת אישור מפורש של שריאל לפריסה הספציפית.
 
-נגישות: תוסף NagishLi 2.3 מוטמע בעמודים הנוכחיים, עם כפתור בעברית בפינה השמאלית התחתונה. המידע על האפשרויות ואיש הקשר Erez Yaakovi מופיע ב־`accessibility.html`. אימייל וטלפון יוצגו בו כאשר יוגדרו ויפורסמו בפרטי העסק בפאנל. פרטי התקשרות טרם נמסרו. ההטמעה אינה הצהרה על תאימות מלאה לתקן.
+## הפעלה מקומית
 
-קובצי NagishLi המקוריים, הרישיונות והקרדיטים נשמרים ללא שינוי ב־`vendor/nagishli/`, מתוך ההפצה הרשמית ב־https://www.nagish.li/download.html . חתימת SHA-256 של הארכיון: `23695E857D2D0FC85B4EACA2541EDD90697785ECB35E92FD3B4F517BD5BB6EDA`; של קובץ הסקריפט: `D01A65146509B88E3D7ECA9501B75D8572BB3FDD5BDE6C9BB909D0B3BCA2858A`. התלות jQuery 3.7.1 נשמרת מקומית ב־`vendor/jquery/` עם הרישיון שלה ובדיקת SRI, כדי למנוע טעינה אוטומטית של גרסה ישנה. הגדרות האתר וההתאמות להפעלה נמצאות בנפרד ב־`accessibility-config.js`.
+נדרש Node.js 24 LTS. התלויות נעולות ב־`package-lock.json`.
 
-פאנל המנהלים: `admin.html`. תשתית Supabase פעילה, והחשבונות `sariel` ו־`erez` הוגדרו כמנהלים. הקטלוג יובא כטיוטות בלבד; המוצרים יופיעו בחנות אחרי בדיקה ופרסום בפאנל. לתצוגת הדגמה מקומית: http://localhost:3000/admin.html?demo=1 . לפרטי ההפעלה, ההרשאות והבדיקות, ראו [מדריך הפעלת הפאנל](ADMIN-SETUP.md).
+```powershell
+npm ci
+npm run dev
+```
 
-האתר ב־GitHub Pages: https://sarielh.github.io/snapir_vekaskeset/
+במחשב הנוכחי הוכנה גם התקנת Node ניידת בתיקיית המשתמש. להפעלה כאשר Node אינו ב־PATH:
 
-האתר ב־Vercel: https://snapirvekaskeset.vercel.app (פריסה אוטומטית מהריפו `erezoni11/snapirvekaskeset`: דחיפה או merge ל־`main` מעדכנים את האתר, ודחיפה לענף אחר יוצרת כתובת Preview).
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\start-next.ps1
+```
 
-העיצוב החדש מתוך `snapir-shop` מוצג בדף הראשי, עם התמונות והפונטים המקומיים. נוספו מגירת סל ועמודי קטגוריות באותו קו עיצובי. גרסה 1 וגרסה 2 נשמרו בתיקיות `version-1` ו־`version-2`. כל דחיפה לענף `main` מעדכנת את האתר אוטומטית באמצעות GitHub Actions.
+- אתר: http://localhost:3000/
+- חנות עם נתוני בדיקה ומלאי: http://localhost:3000/?local-orders=1
+- אדמין של אותה סביבת בדיקה: http://localhost:3000/admin?local-orders=1#orders
+- יציאה ממצב בדיקה: http://localhost:3000/?local-orders=0
 
-לפתיחת האתר, פתחו את `index.html` הראשי בדפדפן. אין צורך בהתקנת תלויות או בבנייה. להפעלה מקומית באמצעות Python, הריצו משורש המאגר `python -m http.server 3000 --bind 127.0.0.1` ופתחו את http://localhost:3000/ .
+יש להשתמש באותו דפדפן, host ופורט בחנות ובאדמין. מצב הבדיקה נשמר בדפדפן בלבד ואינו פונה לנתונים החיים. הוא חסום בדומיין ציבורי. תשתית קבלת ההזמנות הותקנה ב־Supabase. קבלת הזמנות מחייבת מלאי זמין ואפשרויות משלוח או איסוף מפורסמות עם פרטי עסק אמיתיים.
 
-האתר מבוסס על HTML, CSS ו־JavaScript. הסל נפתח כמגירה מימין בלחיצה ובהוספת מוצר, וניתן לסגור אותו בגרירת הידית ימינה, בלחיצה מחוץ למגירה, בכפתור סגירה או ב־Escape. הסל נשמר ב־localStorage ומשותף לכל עמודי העיצוב החדש.
+## איפה עורכים
 
-עמודי הקטגוריות הם `sea.html`, `pool.html`, `frozen.html`, `smoked.html` ו־`deli.html`. בכל עמוד ארבעה מוצרי הדגמה עם מיון וחיפוש. המוצרים, המחירים ותמונות האווירה מיועדים להמחשה; אין חיבור למלאי, סליקה או ביצוע הזמנות.
+| חלק | מקור פעיל |
+| --- | --- |
+| האדר, ניווט, חיפוש ולוגו | `components/header.jsx` |
+| מסגרת החנות המשותפת | `components/shop-shell.jsx` ו־`app/(shop)/layout.jsx` |
+| פוטר ופרטי העסק | `components/footer.jsx` |
+| סל משותף וניהול מצב | `components/cart.jsx`, `components/store-provider.jsx` |
+| קרוסלה | `components/hero.jsx` |
+| עמוד הבית | `components/home.jsx` |
+| קטגוריות וכרטיסי מוצרים | `components/catalog.jsx`, `components/product-card.jsx`, `components/product-grid.jsx` |
+| השלמת הזמנה | `components/checkout.jsx` |
+| אדמין | `components/admin-view.jsx`, `lib/admin-controller.js` |
+| Supabase והקשר של הדפדפן | `lib/store.js` |
+| סביבת בדיקה מבודדת | `lib/local-store.js` |
+| עיצוב האתר | `app/globals.css` |
+| תמונות, פונטים וקבצי ספק | `public/assets/`, `public/vendor/` |
+| חיבור והתאמות נגיש לי | `public/accessibility-config.js`, `public/accessibility-ui.css` |
 
-לאחר שינוי המבנה המשותף ב־`index.html` או קטלוג הדוגמה ב־`tools/prepare-design.py`, הריצו `python tools/prepare-design.py` כדי לעדכן את עמודי הקטגוריות. הקבצים המוכנים נשמרים במאגר, ולכן אין צורך בהרצת הסקריפט להפעלה או לפרסום.
+ההאדר, הפוטר והסל מוגדרים פעם אחת ונשארים פעילים בזמן מעבר בין עמודי החנות. קטגוריות, תוכן ומחירים מגיעים מהקטלוג המפורסם ב־Supabase או מסביבת הבדיקה המקומית. מעבר עמוד או חזרה לטאב מרעננים את הקטלוג; הסל נשמר בנפרד. אין צורך ליצור מחדש קבצי HTML כדי לשנות את התפריט.
+
+## כתובות
+
+`/`, `/sea`, `/pool`, `/frozen`, `/smoked`, `/deli`, `/checkout`, `/admin`, `/accessibility`, `/page?slug=...`.
+
+כתובות ישנות כגון `/smoked.html` מופנות לכתובת הנקייה, תוך שמירת query parameters. דפים וקטגוריות מותאמים מהאדמין נתמכים בנתיבי התוכן הקיימים, בלי הזרקת HTML מהדטאבייס.
+
+## בדיקות ובנייה
+
+```powershell
+npm run build
+npm run test:browser
+npm run test:database
+```
+
+בדיקות הדפדפן מצפות לשרת מקומי ב־http://localhost:3000 . אפשר לשנות באמצעות `SNAPIR_BASE_URL`. הן בודקות ניווט ללא reload, זהות של ההאדר, סל משותף, הזמנות איסוף ומשלוח, אדמין ותצוגה מקדימה, מלאי, ביטול, התאוששות מאובדן תשובה, נגישות, מובייל וכתובות ישנות. קריאות API חיות חסומות בבדיקות. בדיקות SQL משתמשות ב־PostgreSQL WASM מבודד, לא בפרויקט Supabase החי.
+
+## ארכיון ופריסה
+
+קובצי ה־HTML וה־JavaScript הקודמים, כולל העבודה המקומית על ההזמנות והנגישות, נשמרו ב־`legacy/` לעיון. הם אינם מוגשים על ידי Next.js ואינם המקור לעריכת האתר. העיצובים המוקדמים נשמרים גם ב־`version-1` וב־`version-2`.
+
+האתר החי הקודם: https://snapirvekaskeset.vercel.app . פריסת Next.js מוגדרת ב־`vercel.json`, עם תצורת Next.js, התקנת npm ci ובנייה באמצעות `npm run build`. Workflow ה־Pages הישן הוחלף בבדיקת build ידנית שאינה פורסת דבר. אין לבצע דחיפה ל־main או מיזוג ללא אישור פרוד מפורש.
+
+תוסף הנגישות הרשמי NagishLi 3.0 Beta נשמר ללא שינוי, עם הרישיונות והקרדיטים. זו בטא ואינה אישור תאימות מלא לתקן. פרטי ההזמנות המבודדות והצעת Supabase: [מדריך הבדיקה המקומית](docs/checkout-local.md). תצורת ההרשאות והחשבונות: [מדריך האדמין](ADMIN-SETUP.md).
