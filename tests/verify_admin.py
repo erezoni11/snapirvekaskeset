@@ -75,6 +75,18 @@ try:
         assert not errors, errors
         print('PASS: admin draft, preview, demo publish, cancellation, manual order and mobile layout')
 
+        # Real installations start with drafts only; product preview still needs
+        # its unpublished parent category to render the product card.
+        page.locator('[data-section=categories]').click()
+        page.once('dialog',lambda dialog:dialog.accept())
+        page.locator('[data-unpublish]').first.click()
+        page.locator('[data-section=products]').click()
+        page.locator('.admin-table tbody tr').filter(has_text='Draft test product').locator('[data-preview]').click()
+        frame=page.frame_locator('#preview-frame')
+        frame.locator('.store-preview-banner').wait_for()
+        assert frame.get_by_text('Draft test product',exact=True).count()==1
+        page.locator('#close-preview').click()
+
         # Exercise the public storefront against the real published-document shape.
         seed = json.loads((ROOT/'admin-seed.json').read_text(encoding='utf-8'))
         snapshot = [{**d, 'available_kg':20} for d in seed]
@@ -180,7 +192,8 @@ try:
         grant usage on schema auth to anon,authenticated; grant execute on function auth.uid() to anon,authenticated;
         create schema storage; create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);
         create table storage.objects(id uuid,bucket_id text); alter table storage.objects enable row level security;""")
-        execute((ROOT/'supabase/migrations/202611220001_admin.sql').read_text(encoding='utf-8'))
+        for migration in sorted((ROOT/'supabase/migrations').glob('*.sql')):
+            execute(migration.read_text(encoding='utf-8'))
         ids = {role:str(uuid.uuid4()) for role in ['admin','content','shop','orders','outsider']}
         for role, user_id in ids.items():
             query('insert into auth.users(id) values($1)',[user_id])

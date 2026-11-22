@@ -231,4 +231,51 @@ values('site-media','site-media',true,5242880,array['image/jpeg','image/png','im
 create policy svk_media_read on storage.objects for select to anon,authenticated using(bucket_id='site-media');
 create policy svk_media_insert on storage.objects for insert to authenticated with check(bucket_id='site-media' and public.svk_role() in ('admin','content','shop'));
 -- No overwrite/delete: a draft upload cannot replace an image used by the live site.
+
+-- Privileged implementations live outside the exposed Data API schema.
+-- The public RPC wrappers run with caller privileges; implementations retain
+-- their explicit role checks and restricted EXECUTE grants.
+create schema svk_private;
+revoke all on schema svk_private from public;
+grant usage on schema svk_private to anon,authenticated,service_role;
+alter function public.svk_role() set schema svk_private;
+create function public.svk_role() returns text language sql stable security invoker set search_path = '' as $$ select svk_private.svk_role(); $$;
+revoke all on function public.svk_role() from public,anon,authenticated;
+grant execute on function public.svk_role() to anon,authenticated;
+alter function public.svk_can_edit(text) set schema svk_private;
+create function public.svk_can_edit(kind text) returns boolean language sql stable security invoker set search_path = '' as $$ select svk_private.svk_can_edit(kind); $$;
+revoke all on function public.svk_can_edit(text) from public,anon,authenticated;
+grant execute on function public.svk_can_edit(text) to anon,authenticated;
+alter function public.svk_catalog() set schema svk_private;
+create function public.svk_catalog() returns jsonb language sql stable security invoker set search_path = '' as $$ select svk_private.svk_catalog(); $$;
+revoke all on function public.svk_catalog() from public,anon,authenticated;
+grant execute on function public.svk_catalog() to anon,authenticated;
+alter function public.svk_save_document(uuid,text,text,jsonb,integer) set schema svk_private;
+create function public.svk_save_document(p_id uuid,p_kind text,p_slug text,p_data jsonb,p_version integer) returns public.svk_drafts language sql security invoker set search_path = '' as $$ select * from svk_private.svk_save_document(p_id,p_kind,p_slug,p_data,p_version); $$;
+revoke all on function public.svk_save_document(uuid,text,text,jsonb,integer) from public,anon,authenticated;
+grant execute on function public.svk_save_document(uuid,text,text,jsonb,integer) to authenticated;
+alter function public.svk_publish(uuid,integer,boolean) set schema svk_private;
+create function public.svk_publish(p_id uuid,p_version integer,p_publish boolean default true) returns void language sql security invoker set search_path = '' as $$ select svk_private.svk_publish(p_id,p_version,p_publish); $$;
+revoke all on function public.svk_publish(uuid,integer,boolean) from public,anon,authenticated;
+grant execute on function public.svk_publish(uuid,integer,boolean) to authenticated;
+alter function public.svk_set_stock(uuid,numeric,integer) set schema svk_private;
+create function public.svk_set_stock(p_id uuid,p_quantity numeric,p_version integer) returns void language sql security invoker set search_path = '' as $$ select svk_private.svk_set_stock(p_id,p_quantity,p_version); $$;
+revoke all on function public.svk_set_stock(uuid,numeric,integer) from public,anon,authenticated;
+grant execute on function public.svk_set_stock(uuid,numeric,integer) to authenticated;
+alter function public.svk_create_order(uuid,jsonb,uuid,text,text,uuid) set schema svk_private;
+create function public.svk_create_order(p_customer uuid,p_items jsonb,p_shipping uuid,p_address text,p_notes text,p_request uuid) returns uuid language sql security invoker set search_path = '' as $$ select svk_private.svk_create_order(p_customer,p_items,p_shipping,p_address,p_notes,p_request); $$;
+revoke all on function public.svk_create_order(uuid,jsonb,uuid,text,text,uuid) from public,anon,authenticated;
+grant execute on function public.svk_create_order(uuid,jsonb,uuid,text,text,uuid) to authenticated;
+alter function public.svk_order_status(uuid,text,text,text,date) set schema svk_private;
+create function public.svk_order_status(p_id uuid,p_status text,p_courier text default null,p_tracking text default null,p_date date default null) returns void language sql security invoker set search_path = '' as $$ select svk_private.svk_order_status(p_id,p_status,p_courier,p_tracking,p_date); $$;
+revoke all on function public.svk_order_status(uuid,text,text,text,date) from public,anon,authenticated;
+grant execute on function public.svk_order_status(uuid,text,text,text,date) to authenticated;
+alter function public.svk_assign_staff(uuid,text,text,boolean) set schema svk_private;
+create function public.svk_assign_staff(p_user uuid,p_name text,p_role text,p_active boolean) returns void language sql security invoker set search_path = '' as $$ select svk_private.svk_assign_staff(p_user,p_name,p_role,p_active); $$;
+revoke all on function public.svk_assign_staff(uuid,text,text,boolean) from public,anon,authenticated;
+grant execute on function public.svk_assign_staff(uuid,text,text,boolean) to authenticated;
+alter function public.svk_audit_change() set schema svk_private;
+create index svk_orders_customer_idx on public.svk_orders(customer_id);
+create index svk_orders_created_idx on public.svk_orders(created_at desc);
+create index svk_customers_name_idx on public.svk_customers(name);
 commit;

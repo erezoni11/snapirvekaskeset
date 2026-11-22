@@ -169,6 +169,11 @@ async function publish(id,publishNow,buttonEl){
 }
 function preview(doc){
   const snapshot=published.filter(p=>p.id!==doc.id).concat(doc);
+  // A product can be previewed before its parent category has been published.
+  if(doc.kind==='products'&&!snapshot.some(item=>item.kind==='categories'&&item.slug===doc.data.category)){
+    const category=documents.find(item=>item.kind==='categories'&&item.slug===doc.data.category);
+    if(category)snapshot.push(category);
+  }
   const url=doc.kind==='products'||doc.kind==='categories'?'sea.html?category='+encodeURIComponent(doc.kind==='products'?doc.data.category:doc.slug):doc.kind==='pages'?'page.html?slug='+encodeURIComponent(doc.slug):'index.html';
   const frame=$('#preview-frame');frame.src=url+(url.includes('?')?'&':'?')+'admin-preview=1';
   frame.onload=()=>frame.contentWindow.postMessage({type:'svk-preview',documents:snapshot},location.origin);
