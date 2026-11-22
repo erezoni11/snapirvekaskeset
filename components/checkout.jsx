@@ -72,8 +72,17 @@ function failure(e) {
   return "השליחה לא הושלמה. הסל נשמר. אפשר לנסות שוב ללא יצירת הזמנה כפולה.";
 }
 export default function Checkout() {
-  const { cart, clearCart, docs, db, local, ready, loading, refresh } =
-      useStore(),
+  const {
+      cart,
+      clearCart,
+      docs,
+      db,
+      publicDb,
+      local,
+      ready,
+      loading,
+      refresh,
+    } = useStore(),
     [data, setData] = useState(blank),
     [step, setStep] = useState(1),
     [shippingId, setShippingId] = useState(""),
@@ -196,7 +205,7 @@ export default function Checkout() {
     let request = pending;
     try {
       if (!request) {
-        const result = await db.rpc("svk_catalog");
+        const result = await (publicDb || db).rpc("svk_catalog");
         if (result.error) throw result.error;
         const fresh = result.data.filter((d) => d.data?.active !== false),
           shipment = fresh.find(
@@ -227,7 +236,7 @@ export default function Checkout() {
         sessionStorage.setItem(pendingKey, JSON.stringify(request));
         setPending(request);
       }
-      const { data: confirmation, error: problem } = await db.rpc(
+      const { data: confirmation, error: problem } = await (publicDb || db).rpc(
         "svk_checkout",
         request,
       );

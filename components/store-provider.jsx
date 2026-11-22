@@ -58,7 +58,7 @@ export function StoreProvider({ children }) {
     browserServices()
       .then((value) => {
         if (!active) return;
-        dbRef.current = value.db;
+        dbRef.current = value.publicDb || value.db;
         setCart(
           readCart(value.local ? "snapir-cart-local-v1" : "snapir-cart-v1"),
         );
