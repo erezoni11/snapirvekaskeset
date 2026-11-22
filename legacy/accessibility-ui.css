@@ -1,0 +1,25 @@
+.skip-link{position:fixed;inset:12px 12px auto auto;transform:translateY(-180%);z-index:2147483647;background:var(--navy);color:white;padding:12px 20px;border-radius:8px}
+.skip-link:focus{transform:none}
+/* Site-owned integration styles; official NagishLi source and credits are preserved. */
+nagishli #NagishLiWidget{max-width:min(440px,100vw)!important;border:0!important;box-shadow:8px 0 40px #082b4533!important}
+nagishli #NagishLiCloseBtn::before{content:'×';font:30px Arial;color:white}
+nagishli #NagishLiCloseBtn>span{display:none!important}
+nagishli .nagishli-menu-header{border-radius:10px!important;margin:6px 10px!important;width:calc(100% - 20px)!important}
+nagishli .nagishli-option{border-radius:10px!important}
+nagishli [tabindex]:focus-visible{outline:3px solid #00aabd!important;outline-offset:2px!important}
+nagishli .nagishli-trigger-icon{border-radius:50%!important;box-shadow:0 4px 20px #082b4544!important}
+
+nagishli #NagishLiWidget{display:flex!important;flex-direction:column!important;height:100dvh!important}
+nagishli #NagishLiHeader{position:relative!important;flex:0 0 50px!important;width:100%!important}
+nagishli .nagishli-header-right{display:flex!important;align-items:center!important;width:auto!important;top:0!important;height:50px!important}
+nagishli .nagishli-header-text{position:static!important;line-height:50px!important;font-size:22px!important}
+nagishli #NagishLiMain{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;flex:1!important;overflow-y:auto!important;overflow-x:hidden!important;width:100%!important}
+nagishli .nagishli-tabs-content{height:auto!important}
+nagishli .nagishli-tab{height:auto!important;max-height:none!important;overflow:visible!important}
+nagishli #NagishLiFooter{position:relative!important;bottom:auto!important;flex:0 0 auto!important;width:100%!important}
+nagishli .nagishli-menu-header{background:#007b8c!important;color:white!important}
+nagishli .nagishli-option:not(.nagishli-option-enabled):not([aria-pressed=true]){color:#075263!important}
+nagishli .nagishli-option:not(.nagishli-option-enabled):not([aria-pressed=true]):hover{background:#007b8c!important;color:white!important}
+nagishli .nagishli-option-enabled,nagishli .nagishli-option[aria-pressed=true]{background:#007b8c!important;color:white!important}
+nagishli #NagishLiTrigger .nagishli-trigger-icon{width:48px!important;height:48px!important;padding:6px!important}
+@media(max-width:700px){nagishli #NagishLiTrigger{bottom:16px!important;right:12px!important;left:auto!important}}

@@ -1,2 +1,3 @@
 # Keep original third-party distributions byte-for-byte, including their licenses.
 vendor/** -text -whitespace
+public/vendor/** -text -whitespace

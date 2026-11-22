@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>השלמת הזמנה | סנפיר וקשקשת</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-library" aria-hidden="true">
+  <symbol id="i-cart" viewBox="0 0 32 32"><path d="M3 5h5l5 17h13l4-13H10M13 22l-2 4h16"/><circle cx="13" cy="29" r="1.5"/><circle cx="25" cy="29" r="1.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 32 32"><circle cx="13" cy="13" r="8"/><path d="m19 19 8 8"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 32 32"><path d="M3 7h26M3 16h26M3 25h26"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 40 36"><path d="M3 8h23v20H10M26 15h7l5 7v6h-5M26 22h12M3 14h9M1 19h10M4 24h7"/><circle cx="16" cy="29" r="4"/><circle cx="30" cy="29" r="4"/></symbol>
+  <symbol id="i-store" viewBox="0 0 40 36"><path d="M5 14 10 5h20l5 9v5c-3 3-6 3-9 0-3 3-9 3-12 0-3 3-6 3-9 0zM8 21v11h24V21M16 32V23h8v9M13 5l-3 9M20 5v9M27 5l3 9"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 32 32"><path d="M16 27 5 16C-4 6 11 1 16 11c5-10 20-5 11 5z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+</svg>
+<div class="page">
+  <header class="header">
+    <button class="icon-btn menu" aria-label="פתיחת תפריט" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+    <a class="logo" href="index.html" aria-label="סנפיר וקשקשת, עמוד הבית"><img src="assets/logo.png" alt="סנפיר וקשקשת"></a>
+    <nav class="navigation" aria-label="קטגוריות">
+      <a href="sea.html" data-category="sea">דגי ים</a><a href="pool.html" data-category="pool">דגי בריכה</a><a href="frozen.html" data-category="frozen">קפואים</a><a href="smoked.html" data-category="smoked">מעושנים</a><a href="deli.html" data-category="deli">מעדנייה</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-btn" aria-label="חיפוש"><svg><use href="#i-search"/></svg></button>
+      <button class="icon-btn cart-btn" aria-label="סל קניות" aria-haspopup="dialog" aria-controls="cart-dialog"><svg><use href="#i-cart"/></svg><span class="cart-count" aria-live="polite">0</span></button>
+    </div>
+  </header>
+  <main class="checkout-page" id="checkout-main">
+    <a class="checkout-back" href="index.html">→ חזרה לחנות</a>
+    <div id="checkout-flow">
+      <div class="checkout-heading"><p>מהסל, עד אליכם</p><h1>עוד רגע וההזמנה בדרך לחנות</h1><p>בוחרים איך לקבל, בודקים ושולחים לאישור. ללא תשלום אונליין.</p></div>
+      <ol class="checkout-steps" aria-label="שלבי ההזמנה"><li aria-current="step"><span>1</span> פרטים אישיים</li><li><span>2</span> משלוח או איסוף</li><li><span>3</span> בדיקה ושליחה</li></ol>
+      <p id="checkout-error" role="alert" tabindex="-1" hidden></p>
+      <div class="checkout-layout">
+        <form id="checkout-form" novalidate>
+          <fieldset data-checkout-step="1"><legend>נעים להכיר</legend><p>נשתמש בפרטים כדי לתאם ולאשר את ההזמנה.</p><div class="checkout-fields">
+            <label>שם מלא <span aria-hidden="true">*</span><input name="customer_name" autocomplete="name" required minlength="2" maxlength="100"></label>
+            <label>טלפון <span aria-hidden="true">*</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9\s\+\(\)\-]{9,20}" maxlength="20" dir="ltr"></label>
+            <label class="full-field">אימייל ליצירת קשר (לא חובה)<input name="email" type="email" autocomplete="email" maxlength="254" dir="ltr"></label>
+          </div></fieldset>
+          <fieldset data-checkout-step="2" hidden disabled><legend>איך נוח לכם לקבל?</legend><div id="shipping-choices" class="shipping-choices"></div>
+            <div id="delivery-address" class="checkout-fields" hidden>
+              <label>יישוב <span aria-hidden="true">*</span><input name="city" autocomplete="address-level2" required maxlength="100"></label>
+              <label>רחוב <span aria-hidden="true">*</span><input name="street" autocomplete="address-line1" required maxlength="150"></label>
+              <label>מספר בית <span aria-hidden="true">*</span><input name="house" required maxlength="20"></label>
+              <label>דירה (לא חובה)<input name="apartment" autocomplete="address-line2" maxlength="20"></label>
+            </div>
+            <label class="checkout-note">הערות לחנות (לא חובה)<textarea name="notes" rows="3" maxlength="1000" placeholder="הנחיות להכנה, כניסה לבניין או מידע שיעזור לנו"></textarea></label>
+          </fieldset>
+          <fieldset data-checkout-step="3" hidden disabled><legend>הכול נכון? אפשר לשלוח</legend><div id="checkout-review"></div><p class="checkout-explainer">ההזמנה תישלח לחנות ותמתין לאישור ולתיאום. לא מתבצע כאן תשלום אונליין. הסכום מחושב לפי המשקל שבחרתם; אם נדרשת התאמה במשקל בפועל, החנות תתאם אותה איתכם.</p><label class="checkout-consent"><input type="checkbox" name="confirmed" required> בדקתי את הפרטים ואת אופן הקבלה, ואני מבקש/ת לשלוח את ההזמנה לאישור החנות.</label></fieldset>
+          <div class="checkout-actions"><button type="button" class="checkout-secondary" id="checkout-prev" hidden>→ חזרה</button><button type="button" class="primary" id="checkout-next" disabled>להמשך ←</button><button type="submit" class="primary" id="checkout-submit" hidden>שליחת הזמנה לחנות ←</button></div>
+        </form>
+        <aside class="checkout-summary" aria-labelledby="checkout-summary-title"><h2 id="checkout-summary-title">הבחירה שלכם</h2><div id="checkout-items"></div><dl><div><dt>מוצרים</dt><dd id="checkout-subtotal">—</dd></div><div><dt>משלוח / איסוף</dt><dd id="checkout-shipping">ייבחר בהמשך</dd></div><div class="checkout-grand-total"><dt>סה״כ</dt><dd id="checkout-total">—</dd></div></dl><p>ללא תשלום אונליין · בכפוף לאישור החנות</p></aside>
+      </div>
+    </div>
+    <section id="checkout-success" class="checkout-success" hidden tabindex="-1"><div class="success-mark" aria-hidden="true">✓</div><p>תודה שבחרתם בנו</p><h1>ההזמנה התקבלה וממתינה לאישור</h1><p id="receipt-number"></p><p id="receipt-shipping"></p><p>החנות תעבור על ההזמנה ותיצור איתכם קשר לאישור ולתיאום. לא בוצע חיוב כספי.</p><a href="index.html" class="primary">חזרה לחנות</a><a id="receipt-admin" href="admin.html?local-orders=1#orders" hidden>לצפייה בהזמנת הבדיקה באדמין</a></section>
+  </main>
+  <footer class="site-footer" lang="en" dir="ltr">
+    <p>&copy; 2026 Snapir &amp; Kaskeset. All rights reserved.</p>
+    <p>Developed by <span>S.Hadas</span> &amp; <span>E.Yaakovi</span></p>
+  <a class="accessibility-footer-link" href="accessibility.html" lang="he" dir="rtl">נגישות באתר</a>
+  </footer>
+</div>
+<dialog id="search-dialog"><form method="dialog"><button class="close" aria-label="סגירה">×</button><h2>חיפוש מוצרים</h2><input type="search" placeholder="מה תרצו לחפש?" aria-label="חיפוש מוצרים"></form></dialog>
+<dialog id="cart-dialog" class="cart-drawer" aria-labelledby="cart-title">
+  <div class="drawer-shell">
+    <div class="drawer-grip" aria-hidden="true"><span></span></div>
+    <header class="drawer-header">
+      <div><p class="drawer-eyebrow">מהים. ישר אליכם.</p><h2 id="cart-title">סל הקניות שלי <span id="drawer-count">0</span></h2></div>
+      <button class="drawer-close" aria-label="סגירת סל הקניות" autofocus>×</button>
+    </header>
+    <p class="drawer-hint">אפשר לגרור את הידית ימינה כדי לסגור</p>
+    <div id="cart-items" class="drawer-items"></div>
+    <footer class="drawer-footer">
+      <div class="cart-total-row"><span>סכום המוצרים</span><strong class="cart-total"></strong></div>
+      <p>ההזמנה תישלח לאישור החנות · ללא תשלום אונליין</p>
+      <a class="primary checkout-link" href="checkout.html" hidden>להמשך ההזמנה ←</a>
+      <button class="primary continue-shopping">להמשיך לבחור דגים <svg><use href="#i-chevron"/></svg></button>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="local-preview.js"></script><script src="supabase-config.js"></script>
+<script src="storefront.js"></script>
+<script src="script.js"></script><script src="checkout.js"></script>
+<script src="vendor/jquery/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+<script src="accessibility-config.js" defer></script>
+<script src="vendor/nagishli-v3/nagishli_v3_beta/nagishli_beta.js?v=3.0b" charset="utf-8" defer></script>
+</body>
+</html>
