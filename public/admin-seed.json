@@ -1,571 +1,5 @@
 [
   {
-    "id": "b6b32fe2-7832-5a2c-b7a2-331174b16d12",
-    "kind": "categories",
-    "slug": "sea",
-    "data": {
-      "title": "דגי ים",
-      "subtitle": "הטעם של הים, אצלכם במטבח.",
-      "description": "דגים שלמים ופילטים לארוחה הבאה שלכם.",
-      "image": "assets/category-sea.png",
-      "position": 0,
-      "active": true
-    },
-    "version": 1
-  },
-  {
-    "id": "8da9bfe6-1cac-564c-b10e-9df8ea5d7657",
-    "kind": "products",
-    "slug": "sea-1",
-    "data": {
-      "title": "דניס טרי",
-      "description": "דג דניס שלם",
-      "price_cents": 6490,
-      "image": "assets/denis.png",
-      "category": "sea",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": true,
-      "active": true,
-      "position": 0
-    },
-    "version": 1
-  },
-  {
-    "id": "93bb8951-8bce-50c3-8620-b0684253b458",
-    "kind": "products",
-    "slug": "sea-2",
-    "data": {
-      "title": "לברק טרי",
-      "description": "דג לברק שלם",
-      "price_cents": 6990,
-      "image": "assets/sea-bass.png",
-      "category": "sea",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": true,
-      "active": true,
-      "position": 1
-    },
-    "version": 1
-  },
-  {
-    "id": "48fa29e9-fd26-5ddc-9aee-55f029f79111",
-    "kind": "products",
-    "slug": "sea-3",
-    "data": {
-      "title": "טונה טרי",
-      "description": "פילה טונה טרי",
-      "price_cents": 14990,
-      "image": "assets/tuna.png",
-      "category": "sea",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": true,
-      "active": true,
-      "position": 2
-    },
-    "version": 1
-  },
-  {
-    "id": "14ef286d-685b-581c-ab9d-c7278cd378ef",
-    "kind": "products",
-    "slug": "sea-4",
-    "data": {
-      "title": "סלמון טרי",
-      "description": "פילה סלמון טרי",
-      "price_cents": 11990,
-      "image": "assets/salmon.png",
-      "category": "sea",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": true,
-      "active": true,
-      "position": 3
-    },
-    "version": 1
-  },
-  {
-    "id": "ec31925c-85d7-59c9-b56e-3db031b97f30",
-    "kind": "categories",
-    "slug": "pool",
-    "data": {
-      "title": "דגי בריכה",
-      "subtitle": "הדגים שכולם אוהבים.",
-      "description": "מבחר דגי בריכה להכנה בדיוק בדרך שלכם.",
-      "image": "assets/category-pool.png",
-      "position": 1,
-      "active": true
-    },
-    "version": 1
-  },
-  {
-    "id": "7cdb3760-0724-5bd7-8d1e-212dcbed219e",
-    "kind": "products",
-    "slug": "pool-1",
-    "data": {
-      "title": "אמנון טרי",
-      "description": "שלם, פילה או פרוסות",
-      "price_cents": 3990,
-      "image": "assets/category-pool.png",
-      "category": "pool",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 0
-    },
-    "version": 1
-  },
-  {
-    "id": "ff70b361-1cae-5e2f-bbe8-403550bd8a80",
-    "kind": "products",
-    "slug": "pool-2",
-    "data": {
-      "title": "קרפיון טרי",
-      "description": "לבישול ביתי ולארוחות חג",
-      "price_cents": 3490,
-      "image": "assets/category-pool.png",
-      "category": "pool",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 1
-    },
-    "version": 1
-  },
-  {
-    "id": "3874b5cc-51a7-5b24-8c2e-87fcd9f536af",
-    "kind": "products",
-    "slug": "pool-3",
-    "data": {
-      "title": "בורי טרי",
-      "description": "דג שלם להכנה בתנור",
-      "price_cents": 5490,
-      "image": "assets/category-pool.png",
-      "category": "pool",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 2
-    },
-    "version": 1
-  },
-  {
-    "id": "6233d1ae-d6b1-5a0c-9e6d-55fad05f2759",
-    "kind": "products",
-    "slug": "pool-4",
-    "data": {
-      "title": "פורל טרי",
-      "description": "טעם עדין לארוחה מיוחדת",
-      "price_cents": 7990,
-      "image": "assets/category-pool.png",
-      "category": "pool",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פילה",
-        "פרוסות",
-        "שלם"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 3
-    },
-    "version": 1
-  },
-  {
-    "id": "f0fdc6e6-7163-534c-bb8f-338a9054ac1d",
-    "kind": "categories",
-    "slug": "frozen",
-    "data": {
-      "title": "קפואים",
-      "subtitle": "תמיד טוב שיש במקפיא.",
-      "description": "מבחר נוח לארוחה טעימה, בכל יום בשבוע.",
-      "image": "assets/category-frozen.png",
-      "position": 2,
-      "active": true
-    },
-    "version": 1
-  },
-  {
-    "id": "b2e4c6d0-3e94-5579-8068-58c955ad1795",
-    "kind": "products",
-    "slug": "frozen-1",
-    "data": {
-      "title": "פילה סלמון קפוא",
-      "description": "פילה סלמון להכנה קלה",
-      "price_cents": 8990,
-      "image": "assets/salmon.png",
-      "category": "frozen",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "ארוז / קפוא"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 0
-    },
-    "version": 1
-  },
-  {
-    "id": "71667272-cf50-55e1-b82d-8729a4577cc2",
-    "kind": "products",
-    "slug": "frozen-2",
-    "data": {
-      "title": "פילה אמנון קפוא",
-      "description": "פילטים נקיים לבישול",
-      "price_cents": 3490,
-      "image": "assets/category-frozen.png",
-      "category": "frozen",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "ארוז / קפוא"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 1
-    },
-    "version": 1
-  },
-  {
-    "id": "791c9efe-1bab-5d9f-8295-fea318ef11bd",
-    "kind": "products",
-    "slug": "frozen-3",
-    "data": {
-      "title": "פילה בקלה קפוא",
-      "description": "דג לבן בטעם עדין",
-      "price_cents": 4490,
-      "image": "assets/category-frozen.png",
-      "category": "frozen",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "ארוז / קפוא"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 2
-    },
-    "version": 1
-  },
-  {
-    "id": "a591e457-2f6f-5cbc-827e-559c268c636c",
-    "kind": "products",
-    "slug": "frozen-4",
-    "data": {
-      "title": "סטייק טונה קפוא",
-      "description": "נתחי טונה לצריבה",
-      "price_cents": 9990,
-      "image": "assets/tuna.png",
-      "category": "frozen",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "ארוז / קפוא"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 3
-    },
-    "version": 1
-  },
-  {
-    "id": "b68eb21b-b6fa-57a9-ac13-7c51454e5515",
-    "kind": "categories",
-    "slug": "smoked",
-    "data": {
-      "title": "מעושנים",
-      "subtitle": "טעם עמוק. רגע קטן של פינוק.",
-      "description": "דגים מעושנים להגשה, לאירוח ולביס המושלם.",
-      "image": "assets/category-smoked.png",
-      "position": 3,
-      "active": true
-    },
-    "version": 1
-  },
-  {
-    "id": "d05729ea-d23e-5675-8bf8-349256b511ae",
-    "kind": "products",
-    "slug": "smoked-1",
-    "data": {
-      "title": "סלמון מעושן",
-      "description": "פרוסות דקות להגשה",
-      "price_cents": 18990,
-      "image": "assets/category-smoked.png",
-      "category": "smoked",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פרוס / מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 0
-    },
-    "version": 1
-  },
-  {
-    "id": "301245eb-91fb-5dc8-a7d4-9a0eac15d381",
-    "kind": "products",
-    "slug": "smoked-2",
-    "data": {
-      "title": "פורל מעושן",
-      "description": "פילה מעושן בטעם עדין",
-      "price_cents": 15990,
-      "image": "assets/category-smoked.png",
-      "category": "smoked",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פרוס / מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 1
-    },
-    "version": 1
-  },
-  {
-    "id": "3814b5b5-40be-5711-bd94-d52ff2e56677",
-    "kind": "products",
-    "slug": "smoked-3",
-    "data": {
-      "title": "מקרל מעושן",
-      "description": "דג מעושן עשיר בטעם",
-      "price_cents": 8990,
-      "image": "assets/category-smoked.png",
-      "category": "smoked",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פרוס / מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 2
-    },
-    "version": 1
-  },
-  {
-    "id": "2583cd62-23ca-53b2-9792-37fc4a3e9304",
-    "kind": "products",
-    "slug": "smoked-4",
-    "data": {
-      "title": "טונה מעושנת",
-      "description": "פרוסות לאירוח מיוחד",
-      "price_cents": 17990,
-      "image": "assets/category-smoked.png",
-      "category": "smoked",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "פרוס / מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 3
-    },
-    "version": 1
-  },
-  {
-    "id": "1553ba88-20d6-59e9-a5a0-1052832d439b",
-    "kind": "categories",
-    "slug": "deli",
-    "data": {
-      "title": "מעדנייה",
-      "subtitle": "כל מה שמשלים את השולחן.",
-      "description": "תוספות ומעדנים לצד הדגים שאתם אוהבים.",
-      "image": "assets/category-deli.png",
-      "position": 4,
-      "active": true
-    },
-    "version": 1
-  },
-  {
-    "id": "06dd53f6-169c-58e8-a7c3-a3a1b1895341",
-    "kind": "products",
-    "slug": "deli-1",
-    "data": {
-      "title": "סלט איקרה",
-      "description": "מעדן דגים למרכז השולחן",
-      "price_cents": 5990,
-      "image": "assets/category-deli.png",
-      "category": "deli",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 0
-    },
-    "version": 1
-  },
-  {
-    "id": "073a3126-d97f-5ae4-ba44-acc8ab90f17b",
-    "kind": "products",
-    "slug": "deli-2",
-    "data": {
-      "title": "הרינג כבוש",
-      "description": "מעדן דגים בסגנון קלאסי",
-      "price_cents": 7990,
-      "image": "assets/category-deli.png",
-      "category": "deli",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 1
-    },
-    "version": 1
-  },
-  {
-    "id": "5d1e51d9-4bf4-5511-ad27-06b6721dfec1",
-    "kind": "products",
-    "slug": "deli-3",
-    "data": {
-      "title": "סלט טונה",
-      "description": "להגשה לצד לחם טרי",
-      "price_cents": 6990,
-      "image": "assets/category-deli.png",
-      "category": "deli",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 2
-    },
-    "version": 1
-  },
-  {
-    "id": "7bcaddbe-a7f1-5ff2-bdb3-13978a3296e9",
-    "kind": "products",
-    "slug": "deli-4",
-    "data": {
-      "title": "ממרח סלמון",
-      "description": "ממרח עשיר לאירוח",
-      "price_cents": 9990,
-      "image": "assets/category-deli.png",
-      "category": "deli",
-      "weights": [
-        0.5,
-        1.0,
-        1.5
-      ],
-      "cuts": [
-        "מוכן להגשה"
-      ],
-      "featured": false,
-      "active": true,
-      "position": 3
-    },
-    "version": 1
-  },
-  {
     "id": "92bbbf80-eb77-551a-b10e-0fd07172458d",
     "kind": "settings",
     "slug": "main",
@@ -627,6 +61,4327 @@
       "active": true,
       "position": 1,
       "method": "delivery"
+    },
+    "version": 1
+  },
+  {
+    "id": "b6b32fe2-7832-5a2c-b7a2-331174b16d12",
+    "kind": "categories",
+    "slug": "sea",
+    "data": {
+      "title": "דגי ים",
+      "subtitle": "הטעם של הים, אצלכם במטבח.",
+      "description": "דגים שלמים ופילטים לארוחה הבאה שלכם.",
+      "image": "assets/category-sea.png",
+      "position": 0,
+      "active": true
+    },
+    "version": 1
+  },
+  {
+    "id": "ec31925c-85d7-59c9-b56e-3db031b97f30",
+    "kind": "categories",
+    "slug": "pool",
+    "data": {
+      "title": "דגי בריכה",
+      "subtitle": "הדגים שכולם אוהבים.",
+      "description": "מבחר דגי בריכה להכנה בדיוק בדרך שלכם.",
+      "image": "assets/category-pool.png",
+      "position": 1,
+      "active": true
+    },
+    "version": 1
+  },
+  {
+    "id": "f0fdc6e6-7163-534c-bb8f-338a9054ac1d",
+    "kind": "categories",
+    "slug": "frozen",
+    "data": {
+      "title": "קפואים",
+      "subtitle": "תמיד טוב שיש במקפיא.",
+      "description": "מבחר נוח לארוחה טעימה, בכל יום בשבוע.",
+      "image": "assets/category-frozen.png",
+      "position": 2,
+      "active": true
+    },
+    "version": 1
+  },
+  {
+    "id": "b68eb21b-b6fa-57a9-ac13-7c51454e5515",
+    "kind": "categories",
+    "slug": "smoked",
+    "data": {
+      "title": "מעושנים",
+      "subtitle": "טעם עמוק. רגע קטן של פינוק.",
+      "description": "דגים מעושנים להגשה, לאירוח ולביס המושלם.",
+      "image": "assets/category-smoked.png",
+      "position": 3,
+      "active": true
+    },
+    "version": 1
+  },
+  {
+    "id": "1553ba88-20d6-59e9-a5a0-1052832d439b",
+    "kind": "categories",
+    "slug": "deli",
+    "data": {
+      "title": "מעדנייה",
+      "subtitle": "כל מה שמשלים את השולחן.",
+      "description": "תוספות ומעדנים לצד הדגים שאתם אוהבים.",
+      "image": "assets/category-deli.png",
+      "position": 5,
+      "active": true
+    },
+    "version": 1
+  },
+  {
+    "id": "68477ebb-1cbc-59a9-8892-74f727d64f43",
+    "kind": "categories",
+    "slug": "raw",
+    "version": 1,
+    "data": {
+      "title": "נאים",
+      "subtitle": "מנות דג בטעמים רעננים.",
+      "description": "סשימי, סביצ׳ה וקרפצ׳ו לבחירה.",
+      "image": "/assets/catalog/sashimi.webp",
+      "position": 4,
+      "active": true
+    }
+  },
+  {
+    "id": "da1193b3-7b91-53ba-9c6c-13460e72af27",
+    "kind": "products",
+    "slug": "zano-45752",
+    "data": {
+      "title": "פילה אמנון ללא עור – קפוא",
+      "description": "משקל יחידה משוער: 0.21 ק״ג.",
+      "price_cents": 4500,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        0.21
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 0,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45752,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a4%d7%99%d7%9c%d7%94-%d7%90%d7%9e%d7%a0%d7%95%d7%9f-%d7%a7%d7%a4%d7%95%d7%90-%d7%9e%d7%90%d7%a8%d7%96-%d7%a9%d7%9c-%d7%96%d7%95%d7%92/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "85f41d04-7b32-5084-987d-95317a883faf",
+    "kind": "products",
+    "slug": "zano-45751",
+    "data": {
+      "title": "פילה דניס קפוא – מארז של זוג",
+      "description": "משקל יחידה משוער: 0.23 ק״ג.",
+      "price_cents": 19000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        0.23
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 1,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45751,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a4%d7%99%d7%9c%d7%94-%d7%93%d7%a0%d7%99%d7%a1-%d7%a7%d7%a4%d7%95%d7%90-%d7%9e%d7%90%d7%a8%d7%96-%d7%a9%d7%9c-%d7%96%d7%95%d7%92/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "79e43a37-2b5f-54ec-b84e-25e2a9ee2b65",
+    "kind": "products",
+    "slug": "zano-46440",
+    "data": {
+      "title": "קוויאר צמחי כתום צנצנת",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/caviar.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 2,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 46440,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a7%d7%95%d7%95%d7%99%d7%90%d7%a8-%d7%a6%d7%9e%d7%97%d7%99-%d7%9b%d7%aa%d7%95%d7%9d-%d7%a6%d7%a0%d7%a6%d7%a0%d7%aa/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "d961bf9b-f13b-5192-a7d0-d6cad0f3c020",
+    "kind": "products",
+    "slug": "zano-41926",
+    "data": {
+      "title": "מארז מתנה – מוצרי פסקדו",
+      "description": "נמכר ליחידה.",
+      "price_cents": 30000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/gift-box.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 3,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41926,
+      "source_url": "https://zano-dagim.co.il/product/%d7%9e%d7%99%d7%95%d7%a0%d7%96-maille-%d7%a2%d7%95%d7%aa%d7%a7/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "9e9581d1-4b86-5cea-ab63-cc8bd9ad560c",
+    "kind": "products",
+    "slug": "zano-41995",
+    "data": {
+      "title": "שמן זית פסקדו",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/olive-oil.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 4,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41995,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%9e%d7%9f-%d7%96%d7%99%d7%aa-%d7%a4%d7%a1%d7%a7%d7%93%d7%95/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "c8e81e7e-4fab-5a33-ad17-83dfd025cb37",
+    "kind": "products",
+    "slug": "zano-41997",
+    "data": {
+      "title": "שמן צ'ילי פסקדו",
+      "description": "נמכר ליחידה.",
+      "price_cents": 4000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/chili-oil.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 5,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41997,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%9e%d7%9f-%d7%a6%d7%99%d7%9c%d7%99-%d7%a4%d7%a1%d7%a7%d7%93%d7%95/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "9387ebdc-5cc1-532c-9257-2d9e5961e5db",
+    "kind": "products",
+    "slug": "zano-42007",
+    "data": {
+      "title": "שקדים פסקדו",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/almonds.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 6,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42007,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%a7%d7%93%d7%99%d7%9d-%d7%a4%d7%a1%d7%a7%d7%93%d7%95/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "4e6416c8-66cd-5a87-9c5c-ddf7e22faf12",
+    "kind": "products",
+    "slug": "zano-19856",
+    "data": {
+      "title": "מיונז MAILLE",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2700,
+      "price_confirmed": true,
+      "image": "/assets/catalog/mayonnaise.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 7,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19856,
+      "source_url": "https://zano-dagim.co.il/product/maille-miones/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "bbaaf8e7-d621-5935-a6e0-ece329a3330b",
+    "kind": "products",
+    "slug": "zano-19850",
+    "data": {
+      "title": "חרדל MAILLE",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/mustard.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 8,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19850,
+      "source_url": "https://zano-dagim.co.il/product/maille/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "27a7a18a-f327-59fe-98bc-7c37c1537e7b",
+    "kind": "products",
+    "slug": "zano-42002",
+    "data": {
+      "title": "חרדל דיג'ון MAILLE",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/mustard.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 9,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42002,
+      "source_url": "https://zano-dagim.co.il/product/%d7%97%d7%a8%d7%93%d7%9c-%d7%93%d7%99%d7%92%d7%95%d7%9f-maille/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "93311e57-5652-5c11-be56-130b43e1e688",
+    "kind": "products",
+    "slug": "zano-19859",
+    "data": {
+      "title": "קורנישון MAILLE",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/pickles.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 10,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19859,
+      "source_url": "https://zano-dagim.co.il/product/cornichon-maille/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "f5a073a2-0cc0-51cd-8bc7-d13cf65c78aa",
+    "kind": "products",
+    "slug": "zano-19853",
+    "data": {
+      "title": "טונה לבנה ORTIZ",
+      "description": "נמכר ליחידה.",
+      "price_cents": 5900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tinned-tuna.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 11,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19853,
+      "source_url": "https://zano-dagim.co.il/product/tuna-ortiz/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "546825cb-cd14-5e49-86a5-fa7e1baee4b0",
+    "kind": "products",
+    "slug": "zano-19821",
+    "data": {
+      "title": "אנשובי ORTIZ",
+      "description": "נמכר ליחידה.",
+      "price_cents": 5900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tinned-fish.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 12,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19821,
+      "source_url": "https://zano-dagim.co.il/product/anshovi-ortiz/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "ee12a31d-cd6c-573b-8953-969600208ce9",
+    "kind": "products",
+    "slug": "zano-41989",
+    "data": {
+      "title": "מלח מלדון",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3800,
+      "price_confirmed": true,
+      "image": "/assets/catalog/salt.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 13,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41989,
+      "source_url": "https://zano-dagim.co.il/product/%d7%9e%d7%9c%d7%97-%d7%9e%d7%9c%d7%93%d7%95%d7%9f/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "45f488cf-6dd8-5afa-bf04-cc60984bcf0b",
+    "kind": "products",
+    "slug": "zano-22163",
+    "data": {
+      "title": "אנשובי אורטיז גדול",
+      "description": "נמכר ליחידה.",
+      "price_cents": 29900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tinned-fish.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 14,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22163,
+      "source_url": "https://zano-dagim.co.il/product/ortiz/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "e4d1c4e0-9924-50f8-922c-2c2fe0986280",
+    "kind": "products",
+    "slug": "zano-41993",
+    "data": {
+      "title": "אנשובי מקנטבריה LE PÊCHEUR",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tinned-fish.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 15,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41993,
+      "source_url": "https://zano-dagim.co.il/product/%d7%90%d7%a0%d7%a9%d7%95%d7%91%d7%99-%d7%9e%d7%a7%d7%a0%d7%98%d7%91%d7%a8%d7%99%d7%94-le-pecheur/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "894cc7d3-19bc-56a5-91bc-32108338cd06",
+    "kind": "products",
+    "slug": "zano-41991",
+    "data": {
+      "title": "סרדינים קטנים LE PÊCHEUR",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tinned-fish.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 16,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41991,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a1%d7%a8%d7%93%d7%99%d7%a0%d7%99%d7%9d-%d7%a7%d7%98%d7%a0%d7%99%d7%9d-le-pecheur/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "92a561cf-af8f-58d1-8c95-5671d17d25f7",
+    "kind": "products",
+    "slug": "zano-22157",
+    "data": {
+      "title": "שמן כמהין קטן 100 מ\"ל",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/truffle-oil.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 17,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22157,
+      "source_url": "https://zano-dagim.co.il/product/cmehin-oil/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "e2f6e022-2adb-540f-b89e-a64ef1f968f5",
+    "kind": "products",
+    "slug": "zano-22154",
+    "data": {
+      "title": "מיץ יוזו 100 מ\"ל",
+      "description": "נמכר ליחידה.",
+      "price_cents": 5900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/yuzu.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 18,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22154,
+      "source_url": "https://zano-dagim.co.il/product/yuzu/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "cc1b43f9-fb38-5baa-9741-da5df52e7fd5",
+    "kind": "products",
+    "slug": "zano-41999",
+    "data": {
+      "title": "passata MUTI",
+      "description": "נמכר ליחידה.",
+      "price_cents": 1700,
+      "price_confirmed": true,
+      "image": "/assets/catalog/passata.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 19,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41999,
+      "source_url": "https://zano-dagim.co.il/product/passata-muti/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "1ef8bb91-bbc2-5284-8816-e92ec9b25c06",
+    "kind": "products",
+    "slug": "zano-16109",
+    "data": {
+      "title": "הייק דרום אפריקאי (קוד) – מנות",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 9500,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 20,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16109,
+      "source_url": "https://zano-dagim.co.il/product/kod/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "acc076a0-4647-5a21-bf48-0060dbf6ef47",
+    "kind": "products",
+    "slug": "zano-19827",
+    "data": {
+      "title": "הייק דרום אפריקאי (קוד) – אצבעות",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 9500,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 21,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19827,
+      "source_url": "https://zano-dagim.co.il/product/kod-fingers/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7581cf3c-1e8a-5eeb-9d64-de90c9663728",
+    "kind": "products",
+    "slug": "zano-40358",
+    "data": {
+      "title": "שניצל דג",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 7900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/frozen-breaded.webp",
+      "category": "frozen",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 22,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 40358,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%a0%d7%99%d7%a6%d7%9c-%d7%93%d7%92/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "bd093ea8-e43e-5a44-ae8d-5858146dd86c",
+    "kind": "products",
+    "slug": "zano-42049",
+    "data": {
+      "title": "נאגטס",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 7900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/frozen-breaded.webp",
+      "category": "frozen",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 23,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42049,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a0%d7%90%d7%92%d7%98%d7%a1/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "d765f52d-0268-54d9-afea-5baee9595e98",
+    "kind": "products",
+    "slug": "zano-16100",
+    "data": {
+      "title": "נסיכת הנילוס קפואה",
+      "description": "משקל יחידה משוער: 0.75 ק״ג.",
+      "price_cents": 13900,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        0.75
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 24,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16100,
+      "source_url": "https://zano-dagim.co.il/product/nesihat-hanilus/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "657951f4-c25f-535d-8ed3-8511a5e84cb3",
+    "kind": "products",
+    "slug": "zano-16122",
+    "data": {
+      "title": "פילה סלמון  מנות עם עור קפוא",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 13000,
+      "price_confirmed": true,
+      "image": "/assets/salmon.png",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 25,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16122,
+      "source_url": "https://zano-dagim.co.il/product/norway-salmon-fillet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "46dc24f3-1462-514d-afbc-5fe47109b06a",
+    "kind": "products",
+    "slug": "zano-16103",
+    "data": {
+      "title": "טונה אלבקור קפואה",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 7900,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "frozen",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 26,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16103,
+      "source_url": "https://zano-dagim.co.il/product/tuna-albakor/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "2f2ee32b-f50a-5374-87a7-474bc5613e61",
+    "kind": "products",
+    "slug": "zano-19841",
+    "data": {
+      "title": "פילה טונה (כהה) קפואה",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 7900,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "frozen",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 27,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19841,
+      "source_url": "https://zano-dagim.co.il/product/tuna-fillet-dark/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "1dbd9ccf-976a-528a-babe-b284bf2ad994",
+    "kind": "products",
+    "slug": "zano-22190",
+    "data": {
+      "title": "טונה אדומה קפואה",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 11500,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "frozen",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 28,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22190,
+      "source_url": "https://zano-dagim.co.il/product/tuna-fillet-red/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "887d8cb2-0b83-55d4-acae-381b1c4ad401",
+    "kind": "products",
+    "slug": "zano-16125",
+    "data": {
+      "title": "הליבוט קפוא",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 10000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 29,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16125,
+      "source_url": "https://zano-dagim.co.il/product/halibut/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "fc9393d7-9db6-5828-b7ba-fc1fbcc82bc6",
+    "kind": "products",
+    "slug": "zano-16106",
+    "data": {
+      "title": "סול פלייס קפוא",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 7000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 30,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16106,
+      "source_url": "https://zano-dagim.co.il/product/sol-holandi/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "1506555c-669c-5fb9-ab78-891d754bc9b1",
+    "kind": "products",
+    "slug": "zano-16137",
+    "data": {
+      "title": "ביצי בס קפואות",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 18000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/roe.webp",
+      "category": "frozen",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 31,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16137,
+      "source_url": "https://zano-dagim.co.il/product/bass-eggs/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "4d637ed1-a75f-5f5b-a8bb-5ac1742e5ab8",
+    "kind": "products",
+    "slug": "zano-42028",
+    "data": {
+      "title": "ביצי קרפיון חלב",
+      "description": "משקל יחידה משוער: 0.6 ק״ג.",
+      "price_cents": 15000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/roe.webp",
+      "category": "frozen",
+      "weights": [
+        0.6
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 32,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42028,
+      "source_url": "https://zano-dagim.co.il/product/%d7%91%d7%99%d7%a6%d7%99-%d7%a7%d7%a8%d7%a4%d7%99%d7%95%d7%9f-%d7%97%d7%9c%d7%91/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7c1a7c03-6bc7-53d7-aea7-4f9fdb01ec2b",
+    "kind": "products",
+    "slug": "zano-16927",
+    "data": {
+      "title": "פילה סלמון טרי מנות כ- 180- 200 גרם +- (ללא עור, שומן, קוצים וזנב)",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 15500,
+      "price_confirmed": true,
+      "image": "/assets/salmon.png",
+      "category": "sea",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "מנות",
+        "מנות עם עור",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 33,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16927,
+      "source_url": "https://zano-dagim.co.il/product/salmon-fillet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "004e307c-479a-5c25-8384-26d28b019c7f",
+    "kind": "products",
+    "slug": "zano-17741",
+    "data": {
+      "title": "פילה סלמון טרי – נתח (ללא עור, שומן וקוצים)",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 15500,
+      "price_confirmed": true,
+      "image": "/assets/salmon.png",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "cuts": [
+        "פילה שלם",
+        "שלם עם עור",
+        "לפרוס למנות",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 34,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17741,
+      "source_url": "https://zano-dagim.co.il/product/salmon-fillet-piece/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "cbb381da-c0af-5905-9956-78dc119b026d",
+    "kind": "products",
+    "slug": "zano-16918",
+    "data": {
+      "title": "סטייק סלמון טרי",
+      "description": "משקל יחידה משוער: 0.25 ק״ג.",
+      "price_cents": 12000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/salmon-steaks.webp",
+      "category": "sea",
+      "weights": [
+        0.25
+      ],
+      "cuts": [
+        "לארוז בבודדים",
+        "לארוז בזוגות"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 35,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16918,
+      "source_url": "https://zano-dagim.co.il/product/salmon-steak/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "option_label": "הכנה ואריזה:",
+      "packaging_options": [
+        "לארוז בבודדים",
+        "לארוז בזוגות"
+      ]
+    },
+    "version": 1
+  },
+  {
+    "id": "843c58e1-e652-5d52-a868-b6e5564a26eb",
+    "kind": "products",
+    "slug": "zano-16942",
+    "data": {
+      "title": "פילה טונה אדומה טרייה – נתח",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5
+      ],
+      "cuts": [
+        "נתח שלם",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 36,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16942,
+      "source_url": "https://zano-dagim.co.il/product/red-tuna-piece/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "797e20e6-0acc-5dd2-94e8-350c8a9026f9",
+    "kind": "products",
+    "slug": "zano-16909",
+    "data": {
+      "title": "פילה טונה אדומה טרייה – סטייק",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "sea",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 37,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16909,
+      "source_url": "https://zano-dagim.co.il/product/red-tuna-fillet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "319d2095-a0de-5003-b3ce-3d7dd9bc5f4c",
+    "kind": "products",
+    "slug": "zano-41722",
+    "data": {
+      "title": "טונה אדומה טריה – לוין – נתח לסשימי",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 48000,
+      "price_confirmed": true,
+      "image": "/assets/tuna.png",
+      "category": "sea",
+      "weights": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "לוין שלם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 38,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41722,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a4%d7%99%d7%9c%d7%94-%d7%98%d7%95%d7%a0%d7%94-%d7%90%d7%93%d7%95%d7%9e%d7%94-%d7%98%d7%a8%d7%99%d7%99%d7%94-%d7%a0%d7%aa%d7%97-%d7%a2%d7%95%d7%aa%d7%a7/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "047cae2d-a9c6-5a2f-ba1d-5aeec7d15f08",
+    "kind": "products",
+    "slug": "zano-21760",
+    "data": {
+      "title": "טורו טונה",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/toro.webp",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 39,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 21760,
+      "source_url": "https://zano-dagim.co.il/product/turu-tuna-adom/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "cb285ca7-fa9b-53d5-a871-0ee1e1544147",
+    "kind": "products",
+    "slug": "zano-19830",
+    "data": {
+      "title": "פילה נסיכת הנילוס מנות (ללא עור שומן וקוצים)",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 14900,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "מנות נסיכה",
+        "טחון",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 40,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19830,
+      "source_url": "https://zano-dagim.co.il/product/nilus-fillet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "42ebc016-b141-5d5f-8575-3e35ee51280b",
+    "kind": "products",
+    "slug": "zano-16169",
+    "data": {
+      "title": "לברק",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 9500,
+      "price_confirmed": true,
+      "image": "/assets/sea-bass.png",
+      "category": "sea",
+      "weights": [
+        0.5,
+        0.8
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה על 2",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חתוך לאורך עם עצם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 41,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16169,
+      "source_url": "https://zano-dagim.co.il/product/lavrak/",
+      "weight_labels": {
+        "0.5": "בינוני (כ 500 גרם)",
+        "0.8": "גדול (כ 800 גרם)"
+      },
+      "weight_surcharges": {
+        "0.8": 1000
+      },
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": [],
+      "allowed_combinations": [
+        {
+          "weight": 0.5,
+          "cut": "שלם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "שלם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה על 2"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה על 2"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה ללא עור"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה ללא עור"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרוס עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרוס עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרפר עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרפר עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרפר ללא עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרפר ללא עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חתוך לאורך עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חתוך לאורך עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חיתוך לסשימי"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חיתוך לסשימי"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חיתוך לסביצה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חיתוך לסביצה"
+        },
+        {
+          "weight": 0.5,
+          "cut": "טחון"
+        },
+        {
+          "weight": 0.8,
+          "cut": "טחון"
+        },
+        {
+          "weight": 0.5,
+          "cut": "קצוץ"
+        },
+        {
+          "weight": 0.8,
+          "cut": "קצוץ"
+        },
+        {
+          "weight": 0.5,
+          "cut": "מסעדה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "מסעדה"
+        }
+      ]
+    },
+    "version": 1
+  },
+  {
+    "id": "dda01d45-a4a8-55fe-86de-0196fdbb46d6",
+    "kind": "products",
+    "slug": "zano-15504",
+    "data": {
+      "title": "דניס",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/denis.png",
+      "category": "sea",
+      "weights": [
+        0.5,
+        0.8
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה על 2",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חתוך לאורך עם עצם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 42,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15504,
+      "source_url": "https://zano-dagim.co.il/product/dennis/",
+      "weight_labels": {
+        "0.5": "בינוני (כ 500 גרם)",
+        "0.8": "גדול (כ 800 גרם)"
+      },
+      "weight_surcharges": {
+        "0.8": 1000
+      },
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": [],
+      "allowed_combinations": [
+        {
+          "weight": 0.5,
+          "cut": "שלם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "שלם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה על 2"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה על 2"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פילה ללא עור"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פילה ללא עור"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרוס עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרוס עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרפר עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרפר עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "פרפר ללא עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "פרפר ללא עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חתוך לאורך עם עצם"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חתוך לאורך עם עצם"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חיתוך לסשימי"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חיתוך לסשימי"
+        },
+        {
+          "weight": 0.5,
+          "cut": "חיתוך לסביצה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "חיתוך לסביצה"
+        },
+        {
+          "weight": 0.5,
+          "cut": "טחון"
+        },
+        {
+          "weight": 0.8,
+          "cut": "טחון"
+        },
+        {
+          "weight": 0.5,
+          "cut": "קצוץ"
+        },
+        {
+          "weight": 0.8,
+          "cut": "קצוץ"
+        },
+        {
+          "weight": 0.5,
+          "cut": "מסעדה"
+        },
+        {
+          "weight": 0.8,
+          "cut": "מסעדה"
+        }
+      ]
+    },
+    "version": 1
+  },
+  {
+    "id": "478862f0-ab0b-5e49-9d7e-dbdc97aec026",
+    "kind": "products",
+    "slug": "zano-15939",
+    "data": {
+      "title": "בר ים (לברק ג'מבו)",
+      "description": "משקל יחידה משוער: 1.2 ק״ג.",
+      "price_cents": 16000,
+      "price_confirmed": true,
+      "image": "/assets/sea-bass.png",
+      "category": "sea",
+      "weights": [
+        1.2
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה על 2",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חתוך לאורך עם עצם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ",
+        "מסעדה",
+        "דג למלח"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 43,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15939,
+      "source_url": "https://zano-dagim.co.il/product/bar-yam/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "1e192eab-d8b5-5367-bd00-edf98ea06c81",
+    "kind": "products",
+    "slug": "zano-15867",
+    "data": {
+      "title": "לוקוס",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 16000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/grouper.webp",
+      "category": "sea",
+      "weights": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5,
+        5.5,
+        6,
+        6.5,
+        7
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חתוך לאורך עם עצם",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 44,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15867,
+      "source_url": "https://zano-dagim.co.il/product/lokus-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "8995c869-1787-53c9-ac72-f4f123b3a6fe",
+    "kind": "products",
+    "slug": "zano-19809",
+    "data": {
+      "title": "פילה לוקוס עם עור",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "פילה",
+        "פילה ללא עור",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 45,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19809,
+      "source_url": "https://zano-dagim.co.il/product/lokus-fillet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "126def55-7247-5448-b1dc-3c6c28833a18",
+    "kind": "products",
+    "slug": "zano-19812",
+    "data": {
+      "title": "סטייק לוקוס עם עצם",
+      "description": "משקל יחידה משוער: 0.25 ק״ג.",
+      "price_cents": 24000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/grouper-steak.webp",
+      "category": "sea",
+      "weights": [
+        0.25
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 46,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19812,
+      "source_url": "https://zano-dagim.co.il/product/lokus/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "659b8193-0863-55d4-b47e-02468cccf511",
+    "kind": "products",
+    "slug": "zano-40364",
+    "data": {
+      "title": "חומץ בלסמי",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2200,
+      "price_confirmed": true,
+      "image": "/assets/catalog/balsamic.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 47,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 40364,
+      "source_url": "https://zano-dagim.co.il/product/%d7%97%d7%95%d7%9e%d7%a5-%d7%91%d7%9c%d7%a1%d7%9e%d7%99/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "b3000df7-69de-5d8d-9a23-f3cc6716d282",
+    "kind": "products",
+    "slug": "zano-40373",
+    "data": {
+      "title": "קרם בלסמי",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/balsamic.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 48,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 40373,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a7%d7%a8%d7%9d-%d7%91%d7%9c%d7%a1%d7%9e%d7%99/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "2f4cb598-dd2f-5400-bdab-d39606b107ed",
+    "kind": "products",
+    "slug": "zano-22187",
+    "data": {
+      "title": "פאני פורי",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/pani-puri.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 49,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22187,
+      "source_url": "https://zano-dagim.co.il/product/arisa/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "62ce7892-2c45-5c22-90e9-e22bee4b11cd",
+    "kind": "products",
+    "slug": "zano-16143",
+    "data": {
+      "title": "בוטארגו",
+      "description": "משקל יחידה משוער: 0.18 ק״ג.",
+      "price_cents": 65000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/bottarga.webp",
+      "category": "deli",
+      "weights": [
+        0.18
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 50,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16143,
+      "source_url": "https://zano-dagim.co.il/product/butargo/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "04b3199b-70d7-5c7a-bdbb-14751cb8cdff",
+    "kind": "products",
+    "slug": "zano-16147",
+    "data": {
+      "title": "איקרא",
+      "description": "נמכר ליחידה.",
+      "price_cents": 2500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/ikra.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 51,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16147,
+      "source_url": "https://zano-dagim.co.il/product/ikra/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "4f541dc5-8e61-59e3-ae01-11328ca76125",
+    "kind": "products",
+    "slug": "zano-40380",
+    "data": {
+      "title": "שניצל דג מטוגן",
+      "description": "משקל יחידה משוער: 0.1 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 52,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 40380,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%a0%d7%99%d7%a6%d7%9c-%d7%93%d7%92-%d7%9e%d7%98%d7%95%d7%92%d7%9f/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "3d67352c-a694-5131-b516-22292063f5a5",
+    "kind": "products",
+    "slug": "zano-42037",
+    "data": {
+      "title": "נאגטס מטוגן",
+      "description": "משקל יחידה משוער: 0.04 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/nuggets.webp",
+      "category": "deli",
+      "weights": [
+        0.04
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 53,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42037,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a0%d7%90%d7%92%d7%98%d7%a1-%d7%9e%d7%98%d7%95%d7%92%d7%9f/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7abf50bb-7053-5bc2-be09-faf7b0d4a64e",
+    "kind": "products",
+    "slug": "zano-40384",
+    "data": {
+      "title": "פיש אנד צ'יפס",
+      "description": "נמכר ליחידה.",
+      "price_cents": 5500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fish-chips.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 54,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 40384,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a4%d7%99%d7%a9-%d7%90%d7%a0%d7%93-%d7%a6%d7%99%d7%a4%d7%a1/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "0284c039-4011-5b53-aaf3-47399a2ddd2c",
+    "kind": "products",
+    "slug": "zano-17763",
+    "data": {
+      "title": "טונה מטוגנת",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 55,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17763,
+      "source_url": "https://zano-dagim.co.il/product/fried-tuna/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "3584041b-6c28-538b-8633-824beb921497",
+    "kind": "products",
+    "slug": "zano-17757",
+    "data": {
+      "title": "קוד מטוגן",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 56,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17757,
+      "source_url": "https://zano-dagim.co.il/product/fried-kod/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "89c2a739-e666-54f7-a20b-2f6e8f8599f1",
+    "kind": "products",
+    "slug": "zano-16717",
+    "data": {
+      "title": "ברמונדי",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/barramundi.webp",
+      "category": "pool",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה על 2",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 57,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16717,
+      "source_url": "https://zano-dagim.co.il/product/barmundi/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "54ae2116-c158-5ee6-a723-ac821863a117",
+    "kind": "products",
+    "slug": "zano-17760",
+    "data": {
+      "title": "סלמון מטוגן",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 58,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17760,
+      "source_url": "https://zano-dagim.co.il/product/fried-salmon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "a1e4c83f-3951-5402-a9a1-71fa624b93da",
+    "kind": "products",
+    "slug": "zano-16658",
+    "data": {
+      "title": "בס הסלע גדול",
+      "description": "משקל יחידה משוער: 0.8 ק״ג.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/rock-bass.webp",
+      "category": "pool",
+      "weights": [
+        0.8
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 59,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16658,
+      "source_url": "https://zano-dagim.co.il/product/stone-bass/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "9178c1cd-3a9d-503c-98c4-afbf3a303d82",
+    "kind": "products",
+    "slug": "zano-45511",
+    "data": {
+      "title": "מיקס מטוגנים – ללא טונה- מגש אירוח",
+      "description": "מגש דגים מטוגנים במשקל כ־800 גרם.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.8
+      ],
+      "cuts": [
+        "ללא תיבול - רוטב בצד",
+        "מצורמל (מומלץ!)"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 60,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45511,
+      "source_url": "https://zano-dagim.co.il/product/%d7%9e%d7%99%d7%a7%d7%a1-%d7%9e%d7%98%d7%95%d7%92%d7%a0%d7%99%d7%9d-%d7%9c%d7%9c%d7%90-%d7%98%d7%95%d7%a0%d7%94-%d7%9e%d7%92%d7%a9-%d7%90%d7%99%d7%a8%d7%95%d7%97-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "option_label": "הכנה ואריזה:",
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "340a922f-7cde-553b-bb28-0fcd285277e6",
+    "kind": "products",
+    "slug": "zano-16532",
+    "data": {
+      "title": "אמנון ענק",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 7000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/tilapia.webp",
+      "category": "pool",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 61,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16532,
+      "source_url": "https://zano-dagim.co.il/product/amnoon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "ffdc24cd-d81d-5b3f-a34a-669686a79eed",
+    "kind": "products",
+    "slug": "zano-45503",
+    "data": {
+      "title": "מיקס מטוגנים – מגש אירוח",
+      "description": "מגש דגים מטוגנים במשקל כ־800 גרם.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.8
+      ],
+      "cuts": [
+        "ללא תיבול - רוטב בצד",
+        "מצורמל (מומלץ!)"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 62,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45503,
+      "source_url": "https://zano-dagim.co.il/product/%d7%9e%d7%99%d7%a7%d7%a1-%d7%9e%d7%98%d7%95%d7%92%d7%a0%d7%99%d7%9d-%d7%9e%d7%92%d7%a9-%d7%90%d7%99%d7%a8%d7%95%d7%97/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "option_label": "הכנה ואריזה:",
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "33781721-b22d-5ba5-8ed8-829acc2cd407",
+    "kind": "products",
+    "slug": "zano-16595",
+    "data": {
+      "title": "בורי ענק",
+      "description": "משקל יחידה משוער: 1 ק״ג.",
+      "price_cents": 7000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/mullet.webp",
+      "category": "pool",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "טחון",
+        "קצוץ",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 63,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16595,
+      "source_url": "https://zano-dagim.co.il/product/buri/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "79ff107c-ca1d-5250-a7fc-f292da3c359b",
+    "kind": "products",
+    "slug": "zano-17766",
+    "data": {
+      "title": "כנפיי מוסר מטוגנות",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-fish.webp",
+      "category": "deli",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 64,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17766,
+      "source_url": "https://zano-dagim.co.il/product/fried-musar-wings/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "af4f74e3-cc9a-5177-93ff-fe7978dc30d3",
+    "kind": "products",
+    "slug": "zano-17778",
+    "data": {
+      "title": "קבב סלמון וירק מטוגן",
+      "description": "משקל יחידה משוער: 0.06 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fried-kebab.webp",
+      "category": "deli",
+      "weights": [
+        0.06
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 65,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17778,
+      "source_url": "https://zano-dagim.co.il/product/fried-salmon-fish-cutlet/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "36e6d57d-2ab5-564b-a941-381e266a4204",
+    "kind": "products",
+    "slug": "zano-17769",
+    "data": {
+      "title": "ביצי דגים מטוגנות",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 20000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/cooked-roe.webp",
+      "category": "deli",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 66,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17769,
+      "source_url": "https://zano-dagim.co.il/product/fried-fish-eggs/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7bd2c747-c6b8-5d50-aeaa-5b43c043383e",
+    "kind": "products",
+    "slug": "zano-16843",
+    "data": {
+      "title": "פורל",
+      "description": "משקל יחידה משוער: 0.6 ק״ג.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/trout.webp",
+      "category": "pool",
+      "weights": [
+        0.6
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 67,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16843,
+      "source_url": "https://zano-dagim.co.il/product/forel/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "1bdeea9c-f64f-5ba4-a07d-aa34022df6ba",
+    "kind": "products",
+    "slug": "zano-15873",
+    "data": {
+      "title": "אנטיאס שלם",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 16000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/yellowtail.webp",
+      "category": "sea",
+      "weights": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "דג למלח"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 68,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15873,
+      "source_url": "https://zano-dagim.co.il/product/antias/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "265e9fef-edab-5b34-b972-34ed4082b310",
+    "kind": "products",
+    "slug": "zano-41945",
+    "data": {
+      "title": "סיגר ים מטוגן",
+      "description": "נמכר ליחידה.",
+      "price_cents": 900,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fish-cigars.webp",
+      "category": "deli",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 69,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41945,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a1%d7%99%d7%92%d7%a8-%d7%99%d7%9d-%d7%9e%d7%98%d7%95%d7%92%d7%9f/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7570e96f-b288-5b44-8601-f5cf6a499cd6",
+    "kind": "products",
+    "slug": "zano-17792",
+    "data": {
+      "title": "פילה אנטיאס עם עור",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "פילה",
+        "פילה ללא עור",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 70,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17792,
+      "source_url": "https://zano-dagim.co.il/product/antias-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "40d0e145-fe6a-55bd-98db-214a478f6c44",
+    "kind": "products",
+    "slug": "zano-41831",
+    "data": {
+      "title": "פילה אנטיאס טרי – לוין – נתח לסשימי",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 48000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "לוין אנטיאס שלם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 71,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41831,
+      "source_url": "https://zano-dagim.co.il/product/%d7%98%d7%95%d7%a0%d7%94-%d7%90%d7%93%d7%95%d7%9e%d7%94-%d7%98%d7%a8%d7%99%d7%94-%d7%9c%d7%95%d7%99%d7%9f-%d7%a0%d7%aa%d7%97-%d7%9c%d7%a1%d7%a9%d7%99%d7%9e%d7%99-%d7%a2%d7%95%d7%aa%d7%a7/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "7add28bb-1d05-5631-a6a3-97de40b08476",
+    "kind": "products",
+    "slug": "zano-20180",
+    "data": {
+      "title": "פילה המאצ'י",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 35000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "פילה",
+        "פילה ללא עור",
+        "קצוץ"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 72,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 20180,
+      "source_url": "https://zano-dagim.co.il/product/hamaci/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "68c6df66-c770-5a3d-a1dd-54780b478398",
+    "kind": "products",
+    "slug": "zano-41838",
+    "data": {
+      "title": "פילה המאצ'י טרי – לוין – נתח לסשימי",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 48000,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "sea",
+      "weights": [
+        0.1,
+        0.2,
+        0.3,
+        0.41,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "cuts": [
+        "לוין האמצ'י שלם",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 73,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41838,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a4%d7%99%d7%9c%d7%94-%d7%90%d7%a0%d7%98%d7%99%d7%90%d7%a1-%d7%98%d7%a8%d7%99-%d7%9c%d7%95%d7%99%d7%9f-%d7%a0%d7%aa%d7%97-%d7%9c%d7%a1%d7%a9%d7%99%d7%9e%d7%99-%d7%a2%d7%95%d7%aa%d7%a7/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "569bb263-ef36-5aef-a6d4-46968a17ecf8",
+    "kind": "products",
+    "slug": "zano-45660",
+    "data": {
+      "title": "Truite",
+      "description": "משקל יחידה משוער: 0.6 ק״ג.",
+      "price_cents": 0,
+      "price_confirmed": false,
+      "image": "/assets/catalog/trout.webp",
+      "category": "pool",
+      "weights": [
+        0.6
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 74,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45660,
+      "source_url": "https://zano-dagim.co.il/product/truite__trashed/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "559e2166-a350-5032-9f42-5ed3df21fe59",
+    "kind": "products",
+    "slug": "zano-15870",
+    "data": {
+      "title": "פרידה",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 15000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/snapper.webp",
+      "category": "sea",
+      "weights": [
+        0.5,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "חתוך לאורך ללא ראש",
+        "חיתוך לסשימי",
+        "חיתוך לסביצה",
+        "קצוץ",
+        "מסעדה",
+        "דג למלח"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 75,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15870,
+      "source_url": "https://zano-dagim.co.il/product/farida/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "חיתוך לסשימי": 5000,
+        "חיתוך לסביצה": 5000,
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "450bc21e-d3ce-5361-a272-4d19053ec8e0",
+    "kind": "products",
+    "slug": "zano-15881",
+    "data": {
+      "title": "מוסר ים",
+      "description": "משקל יחידה משוער: 2.5 ק״ג.",
+      "price_cents": 12000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/croaker.webp",
+      "category": "sea",
+      "weights": [
+        2.5
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "טחון",
+        "קצוץ",
+        "מסעדה",
+        "דג למלח"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 76,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15881,
+      "source_url": "https://zano-dagim.co.il/product/musar-yam/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "קצוץ": 3000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "4d7164d6-ad19-51bf-9d08-45750fc10308",
+    "kind": "products",
+    "slug": "zano-15877",
+    "data": {
+      "title": "פלמידה לבנה",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 15000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/bonito.webp",
+      "category": "sea",
+      "weights": [
+        0.5,
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        3.5,
+        4,
+        4.5,
+        5
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 77,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 15877,
+      "source_url": "https://zano-dagim.co.il/product/white-palamida/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "54c93376-d2f8-567b-8a1f-fc9aea5960b0",
+    "kind": "products",
+    "slug": "zano-16033",
+    "data": {
+      "title": "ברבוניה",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 14000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/red-mullet.webp",
+      "category": "sea",
+      "weights": [
+        0.05,
+        0.075,
+        0.11
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 78,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16033,
+      "source_url": "https://zano-dagim.co.il/product/barbunia/",
+      "weight_labels": {
+        "0.05": "קטן (כ-50 גרם)",
+        "0.075": "בינוני (כ-75 גרם)",
+        "0.11": "גדול (כ-110 גרם)"
+      },
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": [],
+      "allowed_combinations": [
+        {
+          "weight": 0.11,
+          "cut": "ללא שינוי"
+        },
+        {
+          "weight": 0.075,
+          "cut": "ללא שינוי"
+        },
+        {
+          "weight": 0.05,
+          "cut": "ללא שינוי"
+        }
+      ]
+    },
+    "version": 1
+  },
+  {
+    "id": "b1bf6621-37b2-5754-b529-f537c41778ef",
+    "kind": "products",
+    "slug": "zano-16054",
+    "data": {
+      "title": "מרלן",
+      "description": "משקל יחידה משוער: 0.12 ק״ג.",
+      "price_cents": 13000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/hake.webp",
+      "category": "sea",
+      "weights": [
+        0.12
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "טחון",
+        "חצי פילה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 79,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16054,
+      "source_url": "https://zano-dagim.co.il/product/marlen/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "97f96064-96d6-5064-9ab2-944147848510",
+    "kind": "products",
+    "slug": "zano-16083",
+    "data": {
+      "title": "מליטה",
+      "description": "משקל יחידה משוער: 0.1 ק״ג.",
+      "price_cents": 11000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/barracuda.webp",
+      "category": "sea",
+      "weights": [
+        0.1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 80,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16083,
+      "source_url": "https://zano-dagim.co.il/product/malita/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "591a3442-40f6-570c-a4e1-67adc9256488",
+    "kind": "products",
+    "slug": "zano-16076",
+    "data": {
+      "title": "סרדין",
+      "description": "משקל יחידה משוער: 0.05 ק״ג.",
+      "price_cents": 11000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/sardines.webp",
+      "category": "sea",
+      "weights": [
+        0.05
+      ],
+      "cuts": [
+        "שלם"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 81,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16076,
+      "source_url": "https://zano-dagim.co.il/product/sardin/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "2c720cae-fbf3-5570-8ed6-792399a07fae",
+    "kind": "products",
+    "slug": "zano-16069",
+    "data": {
+      "title": "אנשובי",
+      "description": "משקל יחידה משוער: 0.06 ק״ג.",
+      "price_cents": 11500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/anchovies.webp",
+      "category": "sea",
+      "weights": [
+        0.06
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 82,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16069,
+      "source_url": "https://zano-dagim.co.il/product/anshovi/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "4553b7e0-aa5f-5515-92e2-bdef4e16719f",
+    "kind": "products",
+    "slug": "zano-16087",
+    "data": {
+      "title": "מעורבי – ים (מרמיר/סרגוס/ברבון/ג'רבידה)",
+      "description": "משקל יחידה משוער: 0.06 ק״ג.",
+      "price_cents": 11000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/sea-mix.webp",
+      "category": "sea",
+      "weights": [
+        0.06
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 83,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16087,
+      "source_url": "https://zano-dagim.co.il/product/meurav-yam/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "8e63e310-b2a6-55f8-8e4a-ea616e0ca57e",
+    "kind": "products",
+    "slug": "zano-19866",
+    "data": {
+      "title": "דובר סול",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 29000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/sole.webp",
+      "category": "sea",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 84,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19866,
+      "source_url": "https://zano-dagim.co.il/product/dover-sol/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "a9a3caa5-7c96-55f5-a968-9703fd97f01f",
+    "kind": "products",
+    "slug": "zano-16140",
+    "data": {
+      "title": "ביצי בורי קפואות",
+      "description": "משקל יחידה משוער: 0.7 ק״ג.",
+      "price_cents": 18000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/roe.webp",
+      "category": "frozen",
+      "weights": [
+        0.7
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 85,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16140,
+      "source_url": "https://zano-dagim.co.il/product/buri-eggs/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "ff439e4d-d30f-5804-b5cb-7384ee96398b",
+    "kind": "products",
+    "slug": "zano-16151",
+    "data": {
+      "title": "מטיאס הולנדי אמיתי",
+      "description": "נמכר ליחידה.",
+      "price_cents": 8000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/herring.webp",
+      "category": "smoked",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 86,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16151,
+      "source_url": "https://zano-dagim.co.il/product/mtias/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "c3dc76cc-7c2a-53ae-9762-9b0122758ce0",
+    "kind": "products",
+    "slug": "zano-16163",
+    "data": {
+      "title": "טונה מעושנת",
+      "description": "משקל יחידה משוער: 0.4 ק״ג.",
+      "price_cents": 14000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/smoked-tuna.webp",
+      "category": "smoked",
+      "weights": [
+        0.4
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 87,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16163,
+      "source_url": "https://zano-dagim.co.il/product/smoked-tuna/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "c7621995-9fa4-5daf-a972-9e9d3467cffe",
+    "kind": "products",
+    "slug": "zano-16159",
+    "data": {
+      "title": "פילה פורל ים מעושן-קפוא",
+      "description": "משקל יחידה משוער: 100 ק״ג.",
+      "price_cents": 25000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/smoked-trout.webp",
+      "category": "smoked",
+      "weights": [
+        100
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 88,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16159,
+      "source_url": "https://zano-dagim.co.il/product/smoked-salmon-fillet-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "0b74fbfb-1804-565e-ba05-a15ebd3a8476",
+    "kind": "products",
+    "slug": "zano-16154",
+    "data": {
+      "title": "מקרל מעושן",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/smoked-mackerel.webp",
+      "category": "smoked",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 89,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16154,
+      "source_url": "https://zano-dagim.co.il/product/smoked-makarel/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "2c2133bd-f299-5039-a4da-a260cc218382",
+    "kind": "products",
+    "slug": "zano-16134",
+    "data": {
+      "title": "ביצי קרפיון גרגירים קפואות",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 15000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/roe.webp",
+      "category": "frozen",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 90,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16134,
+      "source_url": "https://zano-dagim.co.il/product/cyprinus-grain/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "a92edc9b-9f39-5ec4-938a-c6a8ca323995",
+    "kind": "products",
+    "slug": "zano-19878",
+    "data": {
+      "title": "פילה ברבוניה קפואה",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3500,
+      "price_confirmed": true,
+      "image": "/assets/hero-fillets-v2.png",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 91,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19878,
+      "source_url": "https://zano-dagim.co.il/product/barbuniaa/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "0a9d2065-8ce1-5158-9f4c-9a33d10e4f77",
+    "kind": "products",
+    "slug": "zano-19881",
+    "data": {
+      "title": "דג טחון",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 8000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/minced-fish.webp",
+      "category": "sea",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 92,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19881,
+      "source_url": "https://zano-dagim.co.il/product/tahon-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "c40aed50-76a5-5733-93b2-12401e7fb3f7",
+    "kind": "products",
+    "slug": "zano-19884",
+    "data": {
+      "title": "דג טחון מתובל",
+      "description": "תערובת הייק, נסיכה וטונה טחונים בתיבול פיקנטי.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/minced-fish.webp",
+      "category": "sea",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 93,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19884,
+      "source_url": "https://zano-dagim.co.il/product/tahon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "11eafa58-52ca-51bb-91e6-861e2f893790",
+    "kind": "products",
+    "slug": "zano-17745",
+    "data": {
+      "title": "קרפצ'ו טונה",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/carpaccio-tuna.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 94,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17745,
+      "source_url": "https://zano-dagim.co.il/product/tuna-carpaccio/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "97a96673-1939-518e-8a7d-c94690dcb44d",
+    "kind": "products",
+    "slug": "zano-17748",
+    "data": {
+      "title": "קרפצ'ו סלמון",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/carpaccio-salmon.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 95,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17748,
+      "source_url": "https://zano-dagim.co.il/product/salmon-carpaccio/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "d92cb44e-a433-532e-ae9f-0a438fc94566",
+    "kind": "products",
+    "slug": "zano-17751",
+    "data": {
+      "title": "קרפצ'ו דג לבן",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/carpaccio-white.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 96,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17751,
+      "source_url": "https://zano-dagim.co.il/product/white-fish-carpaccio/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "85b19d10-81b3-560e-a132-116f469157ed",
+    "kind": "products",
+    "slug": "zano-17754",
+    "data": {
+      "title": "סביצ'ה דג לבן – בימי חמישי ושישי בלבד",
+      "description": "זמין בימי חמישי ושישי בלבד. נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/ceviche-white.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 97,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 17754,
+      "source_url": "https://zano-dagim.co.il/product/sabi/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "319f174d-c2a6-5bc8-9079-434c503dcdd2",
+    "kind": "products",
+    "slug": "zano-19887",
+    "data": {
+      "title": "סביצ'ה סלמון – בימי חמישי ושישי בלבד",
+      "description": "זמין בימי חמישי ושישי בלבד. נמכר ליחידה.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/ceviche-salmon.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 98,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19887,
+      "source_url": "https://zano-dagim.co.il/product/sabi-salmon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "d416be64-ec60-5778-a599-e24e21ef8d48",
+    "kind": "products",
+    "slug": "zano-42031",
+    "data": {
+      "title": "צלחת סשימי – שלושה סוגי דגים",
+      "description": "צלחת המשלבת שלושה סוגי דגים בחיתוך לסשימי.",
+      "price_cents": 8800,
+      "price_confirmed": true,
+      "image": "/assets/catalog/sashimi.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 99,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42031,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a6%d7%9c%d7%97%d7%aa-%d7%a1%d7%a9%d7%99%d7%9e%d7%99-%d7%a9%d7%9c%d7%95%d7%a9%d7%94-%d7%a1%d7%95%d7%92%d7%99%d7%9d/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "57fce8aa-66ec-5d34-960f-c6913d4534c2",
+    "kind": "products",
+    "slug": "zano-42033",
+    "data": {
+      "title": "שורש וואסבי טרי",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6700,
+      "price_confirmed": true,
+      "image": "/assets/catalog/wasabi.webp",
+      "category": "raw",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 100,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 42033,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a9%d7%95%d7%a8%d7%a9-%d7%95%d7%95%d7%90%d7%a1%d7%91%d7%99-%d7%98%d7%a8%d7%99/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "cb12286c-de86-5984-91d7-ec5318fcdf07",
+    "kind": "products",
+    "slug": "zano-41931",
+    "data": {
+      "title": "קציצות סלמון מבושלות",
+      "description": "משקל יחידה משוער: 0.04 ק״ג.",
+      "price_cents": 18000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/fish-meatballs.webp",
+      "category": "deli",
+      "weights": [
+        0.04
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 101,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41931,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a7%d7%91%d7%91-%d7%a1%d7%9c%d7%9e%d7%95%d7%9f-%d7%95%d7%99%d7%a8%d7%a7-%d7%9e%d7%98%d7%95%d7%92%d7%9f-%d7%a2%d7%95%d7%aa%d7%a7/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "5d8d0c15-5047-5a6c-9e0e-4867d1703081",
+    "kind": "products",
+    "slug": "zano-41937",
+    "data": {
+      "title": "סלמון מבושל",
+      "description": "משקל יחידה משוער: 0.12 ק״ג.",
+      "price_cents": 20000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/cooked-salmon.webp",
+      "category": "deli",
+      "weights": [
+        0.12
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 102,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41937,
+      "source_url": "https://zano-dagim.co.il/product/%d7%a1%d7%9c%d7%9e%d7%95%d7%9f-%d7%9e%d7%91%d7%95%d7%a9%d7%9c/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "e083278d-f37f-5d2c-84c6-4dfdc01a9864",
+    "kind": "products",
+    "slug": "zano-41934",
+    "data": {
+      "title": "טונה מבושלת",
+      "description": "משקל יחידה משוער: 0.1 ק״ג.",
+      "price_cents": 18000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/cooked-tuna.webp",
+      "category": "deli",
+      "weights": [
+        0.1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 103,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41934,
+      "source_url": "https://zano-dagim.co.il/product/%d7%98%d7%95%d7%a0%d7%94-%d7%9e%d7%91%d7%95%d7%a9%d7%9c%d7%aa/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "8137ec80-699c-5173-a529-786d95769be6",
+    "kind": "products",
+    "slug": "zano-41939",
+    "data": {
+      "title": "ביצי דגים מבושלות",
+      "description": "משקל יחידה משוער: 0.2 ק״ג.",
+      "price_cents": 25000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/cooked-roe.webp",
+      "category": "deli",
+      "weights": [
+        0.2
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 104,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 41939,
+      "source_url": "https://zano-dagim.co.il/product/%d7%91%d7%99%d7%a6%d7%99-%d7%93%d7%92%d7%99%d7%9d-%d7%9e%d7%91%d7%95%d7%a9%d7%9c%d7%95%d7%aa/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "0a524c7e-bee4-5c6c-9968-8287cc11a9b6",
+    "kind": "products",
+    "slug": "zano-19824",
+    "data": {
+      "title": "סיגר ים קפוא – 10 סיגרים ביחידה",
+      "description": "מארז של 10 סיגרים קפואים.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/frozen-cigars.webp",
+      "category": "frozen",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 105,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19824,
+      "source_url": "https://zano-dagim.co.il/product/sigar-yam/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "e3453598-cb27-5346-9605-a286aa49c710",
+    "kind": "products",
+    "slug": "zano-19875",
+    "data": {
+      "title": "פילה מקרוסקה מעושן",
+      "description": "נמכר ליחידה.",
+      "price_cents": 3800,
+      "price_confirmed": true,
+      "image": "/assets/catalog/smoked-mackerel.webp",
+      "category": "smoked",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 106,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 19875,
+      "source_url": "https://zano-dagim.co.il/product/makroska/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "c146f4c4-a7cb-591b-ae52-be530851f50c",
+    "kind": "products",
+    "slug": "zano-16157",
+    "data": {
+      "title": "קוויאר סלמון קטן",
+      "description": "נמכר ליחידה.",
+      "price_cents": 6500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/caviar.webp",
+      "category": "smoked",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 107,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16157,
+      "source_url": "https://zano-dagim.co.il/product/red-kaviar-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "93cc7bc1-6771-5755-b416-9fb990870df8",
+    "kind": "products",
+    "slug": "zano-21758",
+    "data": {
+      "title": "קבב סלמון מתובל",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 12500,
+      "price_confirmed": true,
+      "image": "/assets/catalog/salmon-kebab.webp",
+      "category": "sea",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 108,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 21758,
+      "source_url": "https://zano-dagim.co.il/product/kabab-salmon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "bedc9f64-e75f-5394-8540-7ff4ad7372a6",
+    "kind": "products",
+    "slug": "zano-21756",
+    "data": {
+      "title": "דג סלמון טחון מתובל",
+      "description": "משקל יחידה משוער: 0.5 ק״ג.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/minced-salmon.webp",
+      "category": "sea",
+      "weights": [
+        0.5
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 109,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 21756,
+      "source_url": "https://zano-dagim.co.il/product/tahon-salmon/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "8b0f8b24-4cdb-5bdc-86f2-bbc07096b275",
+    "kind": "products",
+    "slug": "zano-22176",
+    "data": {
+      "title": "קוויאר סלמון גדול",
+      "description": "נמכר ליחידה.",
+      "price_cents": 11000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/caviar.webp",
+      "category": "smoked",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 110,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 22176,
+      "source_url": "https://zano-dagim.co.il/product/red-kaviar/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "ab9f063c-78e9-58d5-9443-85e4d49d4e87",
+    "kind": "products",
+    "slug": "zano-16906",
+    "data": {
+      "title": "קרפיון",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 6000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/carp.webp",
+      "category": "pool",
+      "weights": [
+        0.8,
+        1,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "טבעות למילוי",
+        "טחון ללא עור ועצם",
+        "טחון עם עור ועם עצם"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 111,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16906,
+      "source_url": "https://zano-dagim.co.il/product/cypriuns/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {
+        "פילה ללא עור": 2000,
+        "טחון ללא עור ועצם": 2000,
+        "טחון עם עור ועם עצם": 2000
+      },
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "5570fea0-d98a-5ff1-afad-4f86bd178a2d",
+    "kind": "products",
+    "slug": "zano-16790",
+    "data": {
+      "title": "מוסר בריכה",
+      "description": "משקל יחידה משוער: 0.8 ק״ג.",
+      "price_cents": 9000,
+      "price_confirmed": true,
+      "image": "/assets/catalog/croaker.webp",
+      "category": "pool",
+      "weights": [
+        0.8
+      ],
+      "cuts": [
+        "שלם",
+        "פילה",
+        "פילה ללא עור",
+        "פרוס עם עצם",
+        "פרפר עם עצם",
+        "פרפר ללא עצם",
+        "מסעדה"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 112,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 16790,
+      "source_url": "https://zano-dagim.co.il/product/musar/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "0479e52d-599a-5f4e-8e18-76fde8cf1457",
+    "kind": "products",
+    "slug": "zano-45661",
+    "data": {
+      "title": "Carpe",
+      "description": "בחירת משקל והכנה לפי האפשרויות הזמינות.",
+      "price_cents": 0,
+      "price_confirmed": false,
+      "image": "/assets/catalog/carp.webp",
+      "category": "pool",
+      "weights": [
+        0.8,
+        1,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "kg",
+      "featured": true,
+      "active": true,
+      "position": 113,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 45661,
+      "source_url": "https://zano-dagim.co.il/product/carpe__trashed/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
+    },
+    "version": 1
+  },
+  {
+    "id": "2d18495a-6bef-5539-a04e-68f7824ab257",
+    "kind": "products",
+    "slug": "zano-44122",
+    "data": {
+      "title": "פילה סלמון טרי – נתח (ללא עור, שומן וקוצים)",
+      "description": "נמכר ליחידה.",
+      "price_cents": 0,
+      "price_confirmed": false,
+      "image": "/assets/salmon.png",
+      "category": "sea",
+      "weights": [
+        1
+      ],
+      "cuts": [
+        "ללא שינוי"
+      ],
+      "sale_unit": "unit",
+      "featured": true,
+      "active": true,
+      "position": 114,
+      "catalog_revision": "zano-2026-11-22-v2",
+      "source_id": 44122,
+      "source_url": "https://zano-dagim.co.il/product/salmon-fillet-piece-2/",
+      "weight_labels": {},
+      "weight_surcharges": {},
+      "cut_surcharges": {},
+      "packaging_options": []
     },
     "version": 1
   }

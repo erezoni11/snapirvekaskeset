@@ -146,6 +146,67 @@ try:
         over_limit=list(guest);over_limit[5]=str(uuid.uuid4());denied(guest_sql,over_limit)
         print('PASS: guest checkout, receipt privacy, retries, tampering, published weights/cuts, shipping/address validation, atomic stock, rate limit, admin approval, pickup completion and cancellation')
 
+        # Production pricing parity across every purchasable imported weight/cut.
+        from decimal import Decimal, ROUND_HALF_UP
+        seed=json.loads((ROOT/'public/admin-seed.json').read_text(encoding='utf8'))
+        imported=[d for d in seed if d['kind']=='products'];cases=[]
+        for doc in imported:
+            data=doc['data']
+            if not data.get('price_confirmed',True):continue
+            for weight in data['weights']:
+                for cut in data['cuts']:
+                    if data.get('allowed_combinations') and not any(c['weight']==weight and c['cut']==cut for c in data['allowed_combinations']):continue
+                    rate=data['price_cents']+data.get('cut_surcharges',{}).get(cut,0)+data.get('weight_surcharges',{}).get(str(weight),0)
+                    # Python renders 1.0 differently from JS object keys.
+                    if str(weight).endswith('.0'):rate=data['price_cents']+data.get('cut_surcharges',{}).get(cut,0)+data.get('weight_surcharges',{}).get(str(int(weight)),0)
+                    one=int((Decimal(rate)*(1 if data.get('sale_unit')=='unit' else Decimal(str(weight)))).quantize(Decimal('1'),rounding=ROUND_HALF_UP))
+                    cases.append({'data':data,'line':{'weight_kg':weight,'amount':2,'cut':cut},'expected':one*2})
+        execute('reset role')
+        comparisons=query("select c->>'expected' as expected,svk_private.quote_product(c->'data',c->'line')->>'total_cents' as actual from jsonb_array_elements($1::jsonb) c",[json.dumps(cases)])
+        assert all(c['expected']==c['actual'] for c in comparisons)
+        as_user('admin')
+        fixtures={}
+        for source_id in [46440,15504,45751]:
+            data=next(d['data'] for d in imported if d['data']['source_id']==source_id).copy();data['category']='test-category'
+            doc=save('products','source-'+str(source_id),data);publish(doc);fixtures[source_id]=doc
+            query('select public.svk_set_stock($1::uuid,20,1)',[doc['id']])
+        denied('select public.svk_set_stock($1::uuid,1.5,2)',[fixtures[46440]['id']])
+        cart=[{'product_id':fixtures[46440]['id'],'weight_kg':1,'amount':2,'cut':'ללא שינוי'}, {'product_id':fixtures[15504]['id'],'weight_kg':.8,'amount':2,'cut':'חיתוך לסביצה','packing':'לארוז בזוגות'}, {'product_id':fixtures[45751]['id'],'weight_kg':.23,'amount':1,'cut':'ללא שינוי'}]
+        args2=[json.dumps({'name':'Mixed units','phone':'0507654321'}),json.dumps(cart),pickup['id'],'{}','',str(uuid.uuid4()),32370]
+        as_user('anon');mixed=query(guest_sql,args2)[0]['receipt'];assert mixed['total_cents']==32370
+        assert query(guest_sql,args2)[0]['receipt']['order_id']==mixed['order_id']
+        bad=list(args2);bad[5]=str(uuid.uuid4());bad[6]=1;denied(guest_sql,bad)
+        for change in [{'weight_kg':.5},{'amount':1.5},{'amount':99}]:
+            bad=list(args2);bad[5]=str(uuid.uuid4());bad[1]=json.dumps([{**cart[0],**change}]);denied(guest_sql,bad)
+        denied('select svk_private.quote_product($1::jsonb,$2::jsonb)',[json.dumps(fixtures[15504]['data']),json.dumps(cart[1])])
+        as_user('admin')
+        snapshot=query('select items from public.svk_orders where id=$1',[mixed['order_id']])[0]['items']
+        assert next(l for l in snapshot if l['sale_unit']=='unit')['quantity_kg']==2
+        assert next(l for l in snapshot if l['packing'])['price_cents']==15000
+        assert float(query('select quantity_kg from public.svk_inventory where product_id=$1',[fixtures[46440]['id']])[0]['quantity_kg'])==18
+        query("select public.svk_order_status($1::uuid,'cancelled')",[mixed['order_id']]);query("select public.svk_order_status($1::uuid,'cancelled')",[mixed['order_id']])
+        assert all(float(r['quantity_kg'])==20 for r in query('select quantity_kg from public.svk_inventory where product_id=any($1::uuid[])',[[d['id'] for d in fixtures.values()]]))
+        manual=[customer,json.dumps([{**cart[0],'quantity_kg':999}]),pickup['id'],'','',str(uuid.uuid4())]
+        manual_id=query(order_sql,manual)[0]['svk_create_order'];manual_snapshot=query('select items,total_cents from public.svk_orders where id=$1',[manual_id])[0]
+        assert manual_snapshot['total_cents']==4000 and manual_snapshot['items'][0]['quantity_kg']==2
+        print(f'PASS: {len(cases)} catalog option prices match; mixed kg/unit checkout; unit validation; surcharges; packing; retries; stock; cancellation; manual server-calculated quantities')
+
+        # The production import is transactional, preserves business/history data and is one-time.
+        execute('reset role')
+        before_import=query("select (select count(*) from public.svk_orders)::int as orders,(select count(*) from public.svk_customers)::int as customers,(select data from public.svk_drafts where kind='settings' and slug='main') as settings")[0]
+        release=(ROOT/'supabase/catalog/20261122_zano_catalog.sql').read_text(encoding='utf8')
+        execute(release)
+        assert query("select count(*)::int as n from public.svk_published where kind='products'")[0]['n']==115
+        assert query("select count(*)::int as n from public.svk_drafts where kind='products' and (data->>'catalog_archived')::boolean")[0]['n']==4
+        after_import=query("select (select count(*) from public.svk_orders)::int as orders,(select count(*) from public.svk_customers)::int as customers,(select data from public.svk_drafts where kind='settings' and slug='main') as settings")[0]
+        assert before_import==after_import
+        assert query("select count(*)::int as n from public.svk_inventory i join public.svk_published p on p.id=i.product_id where p.kind='products' and i.quantity_kg=20")[0]['n']==115
+        query("update public.svk_inventory set quantity_kg=19 where product_id=(select id from public.svk_published where kind='products' limit 1)")
+        execute(release)
+        assert query("select count(*)::int as n from public.svk_inventory i join public.svk_published p on p.id=i.product_id where p.kind='products' and i.quantity_kg=19")[0]['n']==1
+        assert query("select count(*)::int as n from public.svk_audit where resource='catalog_release'")[0]['n']==1
+        print('PASS: one-time production import, 115 published products, stock 20, old products archived, history/settings preserved, repeat import does not reset stock')
+
         browser.close()
 finally:
     server.terminate();server.wait(timeout=10)

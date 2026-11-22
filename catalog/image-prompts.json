@@ -1,0 +1,392 @@
+[
+  {
+    "name": "carp",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw common carp, golden grey large scales and barbels. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/carp.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "trout",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw rainbow trout with silvery speckled skin and a subtle pink lateral stripe. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/trout.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "croaker",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw meagre croaker, elongated silver body and bronze sheen. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/croaker.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "tilapia",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw large tilapia, dark grey oval body and striped tail. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/tilapia.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "yellowtail",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw greater amberjack, silver body with faint golden lateral stripe and yellow tail. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/yellowtail.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "rock-bass",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw striped bass, silver skin with distinct dark longitudinal stripes. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/rock-bass.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "snapper",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw pink dentex fish with rosy silver scales. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/snapper.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "mullet",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw grey mullet, silvery elongated body and small head. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/mullet.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "sardines",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: six small whole raw silver sardines neatly arranged. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/sardines.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "bonito",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw Atlantic bonito, streamlined blue silver body and dark oblique stripes on back. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/bonito.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "barramundi",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw barramundi, silver-grey scales and large mouth. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/barramundi.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "anchovies",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a handful of tiny whole raw silver European anchovies neatly arranged. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/anchovies.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "red-mullet",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: three whole raw red mullet fish, pink red scales and chin barbels. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/red-mullet.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "hake",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw European hake, long silver grey body, large mouth. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/hake.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "salmon-kebab",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: five uncooked salmon and herb kebab patties, orange-pink minced fish with finely chopped green herbs. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/salmon-kebab.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "barracuda",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw small Mediterranean barracuda, long slender silver body and pointed snout. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/barracuda.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "ceviche-salmon",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small white ceramic bowl of diced raw salmon ceviche with lime and finely chopped herbs. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/ceviche-salmon.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "sole",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one whole raw Dover sole, flat oval mottled brown body, both eyes on top. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/sole.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "ceviche-white",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small white ceramic bowl of diced raw white fish ceviche with lime and finely chopped herbs. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/ceviche-white.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "salmon-steaks",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: two raw salmon cross-section steaks, orange flesh with central bone and silver skin around edges. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/salmon-steaks.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "carpaccio-salmon",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a round white plate of very thin orange raw salmon carpaccio slices with tiny herb garnish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/carpaccio-salmon.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "sashimi",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white plate of three distinct kinds of sashimi: orange salmon, deep red tuna and white fish, neatly sliced. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/sashimi.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "carpaccio-tuna",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a round white plate of very thin deep red raw tuna carpaccio slices with tiny herb garnish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/carpaccio-tuna.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "minced-salmon",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small mound of raw coarsely minced orange salmon in a simple ceramic bowl. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/minced-salmon.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "carpaccio-white",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a round white plate of very thin pearly raw white fish carpaccio slices with tiny herb garnish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/carpaccio-white.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "minced-fish",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small mound of raw minced white fish in a simple ceramic bowl. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/minced-fish.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "wasabi",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one fresh whole wasabi root with bumpy green skin and a few leaves, with one clean cut end. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/wasabi.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "cooked-salmon",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white bowl of cooked salmon chunks in rich red tomato sauce, herbs. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/cooked-salmon.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "fried-fish",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white serving platter of golden battered fried pieces of salmon, cod and tuna, lemon wedge, crisp texture. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/fried-fish.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "cooked-tuna",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white bowl of cooked tuna chunks in rich red tomato sauce, herbs. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/cooked-tuna.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "nuggets",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small plate of golden breaded fish nuggets, with one cut nugget revealing white fish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/nuggets.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "fish-cigars",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: three golden crispy cylindrical fish-filled filo cigars on a white plate. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/fish-cigars.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "fish-meatballs",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white bowl of salmon fish meatballs in rich red tomato sauce. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/fish-meatballs.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "smoked-tuna",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: thick slices of naturally smoked tuna loin, warm brown outside and pink tan inside on a small plate. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/smoked-tuna.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "roe",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: two raw pale orange fish roe sacs on a small white plate, realistic delicate membranes, uncooked. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/roe.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "smoked-trout",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a golden smoked sea trout fillet with salmon pink flesh on a slate board. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/smoked-trout.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "cooked-roe",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small white plate of cooked fish roe pieces in tomato sauce. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/cooked-roe.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "herring",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white oval dish of Dutch matjes herring fillets in oil with a few onion rings. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/herring.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "bottarga",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: two cured amber orange mullet roe bottarga lobes, a few thin slices beside them. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/bottarga.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "caviar",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small open unbranded glass jar full of glossy orange salmon roe pearls, lid beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/caviar.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "mustard",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small open unbranded glass jar of creamy golden Dijon mustard with a spoonful beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/mustard.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "smoked-mackerel",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: one golden smoked whole mackerel and a smoked fillet with pale firm flesh on a slate board. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/smoked-mackerel.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "mayonnaise",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small open unbranded glass jar of pale creamy mayonnaise with a spoon beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/mayonnaise.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "ikra",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small open glass jar filled with pale pink whipped fish roe spread, a simple spoon beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/ikra.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "pickles",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a clear unbranded glass jar containing small green cornichon pickles in brine. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/pickles.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "truffle-oil",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small unbranded clear glass bottle of golden truffle oil with a small black truffle beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/truffle-oil.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "passata",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: an unbranded tall clear glass bottle filled with smooth red tomato passata, one ripe tomato beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/passata.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "olive-oil",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: an elegant unbranded dark green glass bottle of olive oil, small dish of golden olive oil and two olives beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/olive-oil.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "yuzu",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small unbranded glass bottle of pale yellow yuzu citrus juice with half a yuzu fruit beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/yuzu.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "balsamic",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small unbranded dark glass bottle of balsamic vinegar, a small dish of glossy dark balsamic beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/balsamic.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "chili-oil",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small unbranded clear glass bottle of red chili oil with a red chili beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/chili-oil.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "salt",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small white bowl containing large pyramid sea salt flakes, a few flakes scattered beside it. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/salt.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "gift-box",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a tasteful open kraft gourmet gift box containing unbranded small jars, dark green olive oil bottle, almond jar and seasoning jar, neatly packed, no fish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/gift-box.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "almonds",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a small white bowl filled with toasted golden brown almonds. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/almonds.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "tinned-fish",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: an open unbranded oval tin containing carefully arranged small silver fish fillets in golden olive oil. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/tinned-fish.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "pani-puri",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: a white plate of round empty crisp golden pani puri shells, a few shells opened showing hollow interior. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/pani-puri.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "frozen-breaded",
+    "prompt": "Use case: product-mockup. Premium seafood and delicatessen shop catalog photograph. Subject: six uncooked pale breaded white fish fingers and nuggets on a white tray, visibly uncooked. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic appetizing textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. Accurate food anatomy. No text, letters, logos, watermarks, brand imitations, price labels, collage or UI.",
+    "file": "public/assets/catalog/frozen-breaded.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "grouper",
+    "prompt": "Use case: product-mockup. A premium seafood shop catalog photograph, one whole raw Mediterranean grouper (dusky grouper, mottled brown skin, large mouth), diagonally arranged on crushed ice on a deep navy slate surface. Small lemon wedge and dill at the edges, soft natural studio light, accurate realistic fish anatomy, appetizing fresh texture. Horizontal 4:3 composition, subject centered with safe margins for square card crop. No text, logos, watermarks, collage, or packaging. This is a standalone product image for a Hebrew fish store.",
+    "file": "public/assets/catalog/grouper.webp",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "sea-mix",
+    "file": "public/assets/catalog/sea-mix.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: a small mixed selection of whole raw Mediterranean fish: silver white seabream, pink red mullet, and striped silver seabream on crushed ice. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "tinned-tuna",
+    "file": "public/assets/catalog/tinned-tuna.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: an open unbranded oval tin containing large pale pink albacore tuna loin chunks in olive oil, no sardines. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "frozen-cigars",
+    "file": "public/assets/catalog/frozen-cigars.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: five uncooked pale ivory cylindrical fish-filled filo pastry cigars neatly arranged on a white tray, visibly uncooked and not golden or fried. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "fish-chips",
+    "file": "public/assets/catalog/fish-chips.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: golden battered cod fish fillets with thick golden potato chips on a white plate and a lemon wedge. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "grouper-steak",
+    "file": "public/assets/catalog/grouper-steak.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: two thick raw grouper cross-section steaks with a central bone, white flesh, brown mottled skin around the edges, on crushed ice. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "fried-kebab",
+    "file": "public/assets/catalog/fried-kebab.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: five cooked golden-brown salmon and green herb kebab patties on a white plate, one split open showing pink minced fish. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "name": "toro",
+    "file": "public/assets/catalog/toro.webp",
+    "prompt": "Use case: product-mockup. Premium seafood shop catalog photograph. Subject: a raw tuna toro belly block and two thick slices, pale rosy pink flesh with clear fine white fat marbling, on crushed ice. Deep navy slate surface, minimal tasteful styling, soft natural studio light, realistic fresh textures. Single coherent product shot, horizontal 4:3 composition with centered subject and safe margins for square card crop. No text, letters, logos, watermarks, collage or UI.",
+    "generator": "built-in image_gen"
+  }
+]

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useStore } from "./store-provider";
 import { money } from "@/lib/store";
 import Icon from "./icon";
+import { stockQuantity } from "@/lib/product-pricing";
 export default function Cart() {
   const { cart, setCart, cartOpen, setCartOpen, docs } = useStore(),
     dialog = useRef(null),
@@ -131,11 +132,20 @@ export default function Cart() {
                 ),
                 reserved = cart
                   .filter((i) => i.productId === item.productId)
-                  .reduce((n, i) => n + Number(i.weightKg || 0) * i.amount, 0);
+                  .reduce(
+                    (n, i) =>
+                      n +
+                      stockQuantity(
+                        docs.find((d) => d.id === i.productId)?.data || {},
+                        i.weightKg,
+                        i.amount,
+                      ),
+                    0,
+                  );
               return (
                 <article
                   className="cart-entry"
-                  key={`${item.productId || item.name}:${item.weight}:${item.cut}`}
+                  key={`${item.productId || item.name}:${item.weight}:${item.cut}:${item.packing || ""}`}
                 >
                   <img src={item.image} alt={item.name} />
                   <div className="cart-entry-details">
@@ -143,6 +153,7 @@ export default function Cart() {
                     <p>
                       {item.weight} · {item.cut}
                     </p>
+                    {item.packing && <p>{item.packing}</p>}
                     <strong>{money(item.unitPrice * item.amount)}</strong>
                     <div className="cart-entry-controls">
                       <div className="cart-quantity">
@@ -157,7 +168,13 @@ export default function Cart() {
                         <button
                           disabled={
                             item.amount >= 99 ||
-                            reserved + Number(item.weightKg || 0) > stock
+                            reserved +
+                              stockQuantity(
+                                docs.find((d) => d.id === item.productId)
+                                  ?.data || {},
+                                item.weightKg,
+                              ) >
+                              stock
                           }
                           aria-label={`הגדלת כמות של ${item.name}`}
                           onClick={() => change(index, 1)}
