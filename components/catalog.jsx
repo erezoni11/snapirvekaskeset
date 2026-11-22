@@ -32,7 +32,7 @@ function Category({ category }) {
           role="img"
           aria-label={title}
           style={{
-            backgroundImage: `url(${JSON.stringify(asset(doc?.data.image, `/assets/category-${category}.png`))})`,
+            backgroundImage: `url(${JSON.stringify(asset(doc?.data.image, category === "raw" ? "/assets/catalog/sashimi.webp" : `/assets/category-${category}.png`))})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
