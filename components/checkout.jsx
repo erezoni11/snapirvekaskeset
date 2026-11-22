@@ -3,6 +3,11 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useStore } from "./store-provider";
 import { money, asset } from "@/lib/store";
+import {
+  validSelection,
+  stockQuantity,
+  selectionPrice,
+} from "@/lib/product-pricing";
 const blank = {
   name: "",
   phone: "",
@@ -22,6 +27,7 @@ const orderItems = (cart) =>
     weight_kg: i.weightKg,
     amount: i.amount,
     cut: i.cut,
+    ...(i.packing ? { packing: i.packing } : {}),
   }));
 function quote(cart, docs, shipping) {
   const used = new Map(),
@@ -35,18 +41,14 @@ function quote(cart, docs, shipping) {
         d.kind === "products" &&
         docs.some((c) => c.kind === "categories" && c.slug === d.data.category),
     );
-    if (
-      !p ||
-      !p.data.weights?.includes(item.weightKg) ||
-      !p.data.cuts?.includes(item.cut)
-    ) {
+    if (!p || !validSelection(p.data, item.weightKg, item.cut)) {
       valid = false;
       continue;
     }
-    const qty = Math.round(item.amount * item.weightKg * 1000) / 1000;
+    const qty = stockQuantity(p.data, item.weightKg, item.amount);
     used.set(p.id, (used.get(p.id) || 0) + qty);
     if (used.get(p.id) > Number(p.available_kg || 0)) valid = false;
-    const cost = Math.round(p.data.price_cents * qty);
+    const cost = selectionPrice(p.data, item.weightKg, item.cut) * item.amount;
     subtotal += cost;
     lines.push({ item, product: p, cost });
   }
@@ -91,7 +93,7 @@ export default function Checkout() {
       .filter((d) => d.kind === "shipping")
       .sort((a, b) => (a.data.position || 0) - (b.data.position || 0)),
     selected = shipping.find((s) => s.id === shippingId),
-    delivery = fulfillment(selected) === "delivery",
+    delivery = !!selected && fulfillment(selected) === "delivery",
     summary = quote(cart, docs, selected);
   useEffect(() => {
     mounted.current = true;
@@ -150,6 +152,16 @@ export default function Checkout() {
   }
   function advance() {
     if (!form.current.reportValidity()) return;
+    if (!cart.length) {
+      setError("הסל ריק. בחרו מוצרים בחנות כדי להמשיך להזמנה.");
+      return;
+    }
+    if (!summary.valid) {
+      setError(
+        "יש בסל מוצר שאינו זמין או כמות שאינה במלאי. פתחו את הסל ועדכנו את הבחירה.",
+      );
+      return;
+    }
     if (
       step === 1 &&
       !/^0[0-9]{8,9}$/.test(
@@ -160,7 +172,11 @@ export default function Checkout() {
       return;
     }
     if (step === 2 && !selected) {
-      setError("יש לבחור שיטת משלוח או איסוף.");
+      setError(
+        shipping.length
+          ? "יש לבחור שיטת משלוח או איסוף."
+          : "החנות עדיין לא הגדירה אפשרות משלוח או איסוף להזמנה. לא ניתן לשלוח את ההזמנה עד להגדרת שיטת מסירה.",
+      );
       return;
     }
     setError("");
@@ -335,8 +351,11 @@ export default function Checkout() {
             הבחירה.
           </p>
         )}
-        {!loading && !shipping.length && (
-          <p role="alert">עדיין לא פורסמו אפשרויות משלוח או איסוף עצמי.</p>
+        {!loading && step === 2 && !shipping.length && (
+          <p className="storefront-status" role="alert">
+            החנות עדיין לא הגדירה אפשרות משלוח או איסוף להזמנה. אפשר לחזור לסל;
+            הפריטים יישמרו עד להסדרת המסירה.
+          </p>
         )}
         <div className="checkout-layout">
           <form id="checkout-form" ref={form} noValidate onSubmit={submit}>
@@ -491,12 +510,7 @@ export default function Checkout() {
                   type="button"
                   className="primary"
                   id="checkout-next"
-                  disabled={
-                    !interactive ||
-                    loading ||
-                    !summary.valid ||
-                    !shipping.length
-                  }
+                  disabled={!interactive || loading || busy}
                   onClick={advance}
                 >
                   להמשך ←
@@ -525,8 +539,9 @@ export default function Checkout() {
                   <div>
                     <h3>{product.data.title}</h3>
                     <p>
-                      {item.amount} × {item.weightKg} ק״ג · {item.cut}
+                      {item.amount} × {item.weight} · {item.cut}
                     </p>
+                    {item.packing && <p>{item.packing}</p>}
                     <strong>{money(cost)}</strong>
                   </div>
                 </div>

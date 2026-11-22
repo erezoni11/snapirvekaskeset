@@ -4,12 +4,14 @@ import { useStore } from "./store-provider";
 import ProductCard from "./product-card";
 export default function ProductGrid({ category, home = false }) {
   const { docs, categories, search, loading, error, refresh } = useStore(),
-    [sort, setSort] = useState("recommended");
+    [sort, setSort] = useState("recommended"),
+    [homeCategory, setHomeCategory] = useState("all");
   const products = docs.filter(
     (d) =>
       d.kind === "products" &&
       categories.some((c) => c.slug === d.data.category) &&
       (home ? d.data.featured : d.data.category === category) &&
+      (!home || homeCategory === "all" || d.data.category === homeCategory) &&
       (!search ||
         `${d.data.title} ${d.data.description || ""}`.includes(search)),
   );
@@ -21,6 +23,24 @@ export default function ProductGrid({ category, home = false }) {
     products.sort((a, b) => a.data.title.localeCompare(b.data.title, "he"));
   return (
     <>
+      {home && (
+        <nav
+          className="product-category-filters"
+          aria-label="סינון מוצרים לפי קטגוריה"
+        >
+          {[{ slug: "all", data: { title: "כל המוצרים" } }, ...categories].map(
+            (c) => (
+              <button
+                key={c.slug}
+                aria-pressed={homeCategory === c.slug}
+                onClick={() => setHomeCategory(c.slug)}
+              >
+                {c.data.title}
+              </button>
+            ),
+          )}
+        </nav>
+      )}
       {!home && (
         <div className="catalog-toolbar">
           <div>

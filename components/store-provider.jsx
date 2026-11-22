@@ -9,6 +9,12 @@ import {
 } from "react";
 import { browserServices, readCart, asset } from "@/lib/store";
 import { usePathname } from "next/navigation";
+import {
+  selectionPrice,
+  stockQuantity,
+  weightLabel,
+  validSelection,
+} from "@/lib/product-pricing";
 const StoreContext = createContext(null);
 export function StoreProvider({ children }) {
   const path = usePathname(),
@@ -121,16 +127,27 @@ export function StoreProvider({ children }) {
       parent.postMessage({ type: "svk-preview-ready" }, location.origin);
     return () => window.removeEventListener("message", receive);
   }, []);
-  const add = useCallback((product, weight, cut, amount) => {
+  const add = useCallback((product, weight, cut, amount, packing = "") => {
+    if (!validSelection(product.data, weight, cut)) return;
     setCart((current) => {
       const existing = current.find(
         (i) =>
-          i.productId === product.id && i.weightKg === weight && i.cut === cut,
+          i.productId === product.id &&
+          i.weightKg === weight &&
+          i.cut === cut &&
+          (i.packing || "") === packing,
       );
       const quantity = (existing?.amount || 0) + amount;
       if (
         quantity > 99 ||
-        quantity * weight > Number(product.available_kg || 0)
+        current
+          .filter((i) => i.productId === product.id)
+          .reduce(
+            (n, i) => n + stockQuantity(product.data, i.weightKg, i.amount),
+            0,
+          ) +
+          stockQuantity(product.data, weight, amount) >
+          Number(product.available_kg || 0)
       )
         return current;
       if (existing)
@@ -143,11 +160,12 @@ export function StoreProvider({ children }) {
           productId: product.id,
           name: product.data.title,
           weightKg: weight,
-          weight: weight < 1 ? `${weight * 1000} גרם` : `${weight} ק״ג`,
+          weight: weightLabel(product.data, weight),
           cut,
+          packing,
           amount,
           image: asset(product.data.image),
-          unitPrice: Math.round(product.data.price_cents * weight),
+          unitPrice: selectionPrice(product.data, weight, cut),
         },
       ];
     });
@@ -181,7 +199,8 @@ export function StoreProvider({ children }) {
                     (line) =>
                       line.product_id === item.productId &&
                       line.weight_kg === item.weightKg &&
-                      line.cut === item.cut,
+                      line.cut === item.cut &&
+                      (line.packing || "") === (item.packing || ""),
                   )
                   .reduce((n, line) => n + line.amount, 0);
                 return { ...item, amount: item.amount - sent };

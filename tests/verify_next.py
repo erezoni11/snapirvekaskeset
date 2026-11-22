@@ -6,6 +6,8 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 base=os.environ.get('SNAPIR_BASE_URL','http://localhost:3000').rstrip('/')
 root=Path(__file__).resolve().parent.parent
+seed=json.loads((root/'public/admin-seed.json').read_text(encoding='utf8'));products=[d for d in seed if d['kind']=='products']
+category_counts={d['slug']:sum(p['data']['category']==d['slug'] for p in products) for d in seed if d['kind']=='categories'}
 for name,expected in [('public/vendor/nagishli/nagishli.js','D01A65146509B88E3D7ECA9501B75D8572BB3FDD5BDE6C9BB909D0B3BCA2858A'),('public/vendor/nagishli-v3/nagishli_v3_beta/nagishli_beta.js','5F88B81FDB3B55ED562458F7C99DE7A081241DAA76F8FECA9ABFD7CD8ECD885B')]:
     assert hashlib.sha256((root/name).read_bytes()).hexdigest().upper()==expected
 
@@ -20,16 +22,16 @@ with sync_playwright() as p:
         page.on('response',lambda r:failed.append((r.status,r.url)) if r.status>=400 and r.url.startswith(base) else None)
     context.on('page',observe)
     page=context.new_page();page.bring_to_front();page.goto(base+'/?local-orders=1',wait_until='networkidle')
-    page.locator('.product .add-cart').first.wait_for();assert page.locator('.product').count()==20
+    page.locator('.product .add-cart').first.wait_for();assert page.locator('.product').count()==len(products)
     page.evaluate('window.routeMarker=42;window.headerBefore=document.querySelector(".header")')
     product_id=page.locator('.product').first.get_attribute('data-product-id')
     page.locator('.product .add-cart').first.click();page.locator('.drawer-close').click();page.locator('#cart-dialog').wait_for(state='hidden')
-    for slug in ['pool','smoked','frozen','deli','sea']:
+    for slug in ['pool','smoked','frozen','deli','raw','sea']:
         page.locator(f'.navigation a[data-category={slug}]').click();page.wait_for_url(base+'/'+slug)
         assert page.evaluate('routeMarker===42 && headerBefore===document.querySelector(".header")')
         assert page.locator('.cart-count').inner_text()=='1'
         assert page.locator('.navigation a[aria-current=page]').count()==1
-        assert page.locator('.product').count()==4
+        assert page.locator('.product').count()==category_counts[slug]
         assert page.locator('#NagishLiTrigger').count()==1
     page.locator('.cart-btn').click();page.locator('.checkout-link').click();page.wait_for_url(base+'/checkout')
     def details():
@@ -62,7 +64,7 @@ with sync_playwright() as p:
     state=page.evaluate('JSON.parse(localStorage.getItem("snapir-local-store-v1"))');assert len(state['orders'])==2
     assert state['orders'][0]['shipping_cents']==3500 and state['orders'][0]['fulfillment']=='delivery'
     admin.bring_to_front();admin.goto(base+'/admin?local-orders=1#orders',wait_until='networkidle');admin.locator('[data-order]').first.click();admin.locator('[name=status]').select_option('cancelled');admin.once('dialog',lambda d:d.accept());admin.locator('#save-editor').click();admin.locator('#editor-dialog').wait_for(state='hidden')
-    stock=admin.evaluate('(id)=>JSON.parse(localStorage.getItem("snapir-local-store-v1")).inventory.find(i=>i.product_id===id).quantity_kg',product_id);assert stock==19.5
+    stock=admin.evaluate('(id)=>JSON.parse(localStorage.getItem("snapir-local-store-v1")).inventory.find(i=>i.product_id===id).quantity_kg',product_id);assert abs(stock-(20-next(d['data']['weights'][0] for d in products if d['id']==product_id)))<0.0001
     # Local reload preserves idempotency after a committed order response is lost.
     page.bring_to_front();page.goto(base+'/?local-orders=1',wait_until='networkidle');page.locator('.product .add-cart').first.click();page.locator('.checkout-link').click();details();page.locator('.shipping-choice').filter(has_text='איסוף עצמי').click();page.locator('#checkout-next').click();page.locator('[name=confirmed]').check()
     page.evaluate('''()=>{const original=snapirLocalPreview.client.rpc;let lost=false;snapirLocalPreview.client.rpc=(...args)=>{const promise=original(...args).then(result=>{if(args[0]==='svk_checkout'&&!lost){lost=true;throw Error('Network response lost');}return result;});promise.abortSignal=()=>promise;return promise;};}''')
@@ -78,6 +80,27 @@ with sync_playwright() as p:
     page.set_viewport_size({'width':390,'height':844});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     page.locator('.menu').click();page.locator('.navigation a[data-category=pool]').click();page.wait_for_url(base+'/pool');assert not page.locator('.navigation').is_visible()
     page.screenshot(path=str(Path(os.environ['TEMP'])/'snapir-next-mobile.png'),full_page=True)
+    # Missing delivery configuration must not silently disable personal details.
+    regression_context=browser.new_context(viewport={'width':1440,'height':1000})
+    regression_context.route('**/rest/v1/**',lambda route:(live.append(route.request.url),route.abort()))
+    regression_context.on('page',observe)
+    regression=regression_context.new_page();regression.goto(base+'/?local-orders=1',wait_until='networkidle')
+    regression.evaluate("()=>{const s=snapirLocalPreview.read();s.published=s.published.filter(d=>d.kind!=='shipping');snapirLocalPreview.save(s,s.version)}")
+    regression.reload(wait_until='networkidle');regression.locator('.product .add-cart').first.click();regression.locator('.checkout-link').click();regression.locator('#cart-dialog').wait_for(state='hidden')
+    regression.locator('#checkout-next:not(:disabled)').wait_for()
+    regression.locator('[name=customer_name]').fill('לקוח בדיקה');regression.locator('[name=phone]').fill('0501234567');regression.locator('#checkout-next').click()
+    assert regression.locator('[data-checkout-step="2"]').is_visible()
+    assert regression.locator('#delivery-address').count()==0
+    regression.locator('#checkout-next').click();regression.locator('#checkout-error').filter(has_text='שיטת מסירה').wait_for()
+    assert regression.evaluate('snapirLocalPreview.read().orders.length')==0
+    # Unavailable inventory produces an explicit actionable error, not a dead button.
+    regression.evaluate("()=>{const s=snapirLocalPreview.read();s.inventory.forEach(i=>i.quantity_kg=0);s.published=s.published.concat(s.documents.filter(d=>d.kind==='shipping'));snapirLocalPreview.save(s,s.version)}")
+    regression.reload(wait_until='networkidle');regression.locator('#checkout-next:not(:disabled)').wait_for()
+    regression.locator('[name=customer_name]').fill('לקוח בדיקה');regression.locator('[name=phone]').fill('0501234567');regression.locator('#checkout-next').click();regression.locator('#checkout-error').filter(has_text='מלאי').wait_for()
+    assert regression.locator('[data-checkout-step="1"]').is_visible()
+    assert regression.evaluate('snapirLocalPreview.read().orders.length')==0
+    regression_context.close()
+    print('PASS: missing shipping and unavailable stock explain checkout blockers without silent disabled Continue',flush=True)
     # A shared header edit is visible on the next route without rebuilding templates.
     page.goto(base+'/index.html?local-orders=1',wait_until='networkidle');assert page.url==base+'/?local-orders=1'
     page.goto(base+'/smoked.html?local-orders=1',wait_until='networkidle');assert page.url==base+'/smoked?local-orders=1'

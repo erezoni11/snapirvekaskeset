@@ -6,6 +6,7 @@ const names = {
   frozen: "קפואים",
   smoked: "מעושנים",
   deli: "מעדנייה",
+  raw: "נאים",
 };
 export function generateStaticParams() {
   return Object.keys(names).map((category) => ({ category }));
