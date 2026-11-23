@@ -63,7 +63,7 @@ with sync_playwright() as p:
     page.locator('#checkout-next').click();page.locator('[name=confirmed]').check();page.locator('#checkout-submit').click();page.locator('#checkout-success').wait_for()
     state=page.evaluate('JSON.parse(localStorage.getItem("snapir-local-store-v1"))');assert len(state['orders'])==2
     assert state['orders'][0]['shipping_cents']==3500 and state['orders'][0]['fulfillment']=='delivery'
-    admin.bring_to_front();admin.goto(base+'/admin?local-orders=1#orders',wait_until='networkidle');admin.locator('[data-order]').first.click();admin.locator('[name=status]').select_option('cancelled');admin.once('dialog',lambda d:d.accept());admin.locator('#save-editor').click();admin.locator('#editor-dialog').wait_for(state='hidden')
+    admin.bring_to_front();admin.goto(base+'/admin?local-orders=1#orders',wait_until='networkidle');admin.locator('[data-order]').first.click();admin.locator('[name=status]').select_option('cancelled');admin.locator('#save-editor').click();admin.locator('#confirm-accept').click();admin.locator('#editor-dialog').wait_for(state='hidden')
     stock=admin.evaluate('(id)=>JSON.parse(localStorage.getItem("snapir-local-store-v1")).inventory.find(i=>i.product_id===id).quantity_kg',product_id);assert abs(stock-(20-next(d['data']['weights'][0] for d in products if d['id']==product_id)))<0.0001
     # Local reload preserves idempotency after a committed order response is lost.
     page.bring_to_front();page.goto(base+'/?local-orders=1',wait_until='networkidle');page.locator('.product .add-cart').first.click();page.locator('.checkout-link').click();details();page.locator('.shipping-choice').filter(has_text='איסוף עצמי').click();page.locator('#checkout-next').click();page.locator('[name=confirmed]').check()
