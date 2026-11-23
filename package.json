@@ -8,6 +8,7 @@
     "start": "next start --hostname 127.0.0.1 --port 3000",
     "dev": "next dev --hostname 127.0.0.1 --port 3000",
     "test:browser": "python tests/verify_next.py",
+    "test:stock": "python tests/verify_stock.py",
     "test:database": "python tests/verify_database.py",
     "format": "prettier --write app components lib next.config.mjs jsconfig.json"
   },

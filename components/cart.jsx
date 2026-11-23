@@ -1,16 +1,31 @@
 "use client";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { useStore } from "./store-provider";
 import { money } from "@/lib/store";
 import Icon from "./icon";
-import { stockQuantity } from "@/lib/product-pricing";
+import {
+  availableProduct,
+  cartItemAvailable,
+  fitsStock,
+} from "@/lib/product-availability";
 export default function Cart() {
-  const { cart, setCart, cartOpen, setCartOpen, docs } = useStore(),
+  const {
+      cart,
+      setCart,
+      cartOpen,
+      setCartOpen,
+      docs,
+      loading,
+      error,
+      refresh,
+    } = useStore(),
     dialog = useRef(null),
     start = useRef(null),
-    path = usePathname();
+    path = usePathname(),
+    router = useRouter();
+  const [checking, setChecking] = useState(false);
+  const unavailable = cart.some((item) => !cartItemAvailable(docs, cart, item));
   useEffect(() => {
     setCartOpen(false);
   }, [path, setCartOpen]);
@@ -51,11 +66,31 @@ export default function Cart() {
   function change(index, delta) {
     setCart((items) =>
       items.map((i, n) =>
-        n === index
+        n === index &&
+        (delta < 0 ||
+          fitsStock(
+            availableProduct(docs, i.productId),
+            items,
+            i.weightKg,
+            delta,
+          ))
           ? { ...i, amount: Math.max(1, Math.min(99, i.amount + delta)) }
           : i,
       ),
     );
+  }
+  async function checkout() {
+    if (checking) return;
+    setChecking(true);
+    try {
+      const fresh = await refresh({ background: true });
+      if (!fresh || cart.some((item) => !cartItemAvailable(fresh, cart, item)))
+        return;
+      close();
+      router.push("/checkout");
+    } finally {
+      setChecking(false);
+    }
   }
   return (
     <dialog
@@ -127,21 +162,8 @@ export default function Cart() {
             </div>
           ) : (
             cart.map((item, index) => {
-              const stock = Number(
-                  docs.find((d) => d.id === item.productId)?.available_kg || 0,
-                ),
-                reserved = cart
-                  .filter((i) => i.productId === item.productId)
-                  .reduce(
-                    (n, i) =>
-                      n +
-                      stockQuantity(
-                        docs.find((d) => d.id === i.productId)?.data || {},
-                        i.weightKg,
-                        i.amount,
-                      ),
-                    0,
-                  );
+              const product = availableProduct(docs, item.productId),
+                available = cartItemAvailable(docs, cart, item);
               return (
                 <article
                   className="cart-entry"
@@ -150,6 +172,12 @@ export default function Cart() {
                   <img src={item.image} alt={item.name} />
                   <div className="cart-entry-details">
                     <h3>{item.name}</h3>
+                    {!loading && !available && (
+                      <p role="alert">
+                        המוצר או הכמות שבחרתם אינם זמינים. יש להפחית כמות או
+                        להסיר מהסל.
+                      </p>
+                    )}
                     <p>
                       {item.weight} · {item.cut}
                     </p>
@@ -168,13 +196,10 @@ export default function Cart() {
                         <button
                           disabled={
                             item.amount >= 99 ||
-                            reserved +
-                              stockQuantity(
-                                docs.find((d) => d.id === item.productId)
-                                  ?.data || {},
-                                item.weightKg,
-                              ) >
-                              stock
+                            loading ||
+                            checking ||
+                            !available ||
+                            !fitsStock(product, cart, item.weightKg, 1)
                           }
                           aria-label={`הגדלת כמות של ${item.name}`}
                           onClick={() => change(index, 1)}
@@ -208,14 +233,20 @@ export default function Cart() {
             </strong>
           </div>
           <p>ההזמנה תישלח לאישור החנות · ללא תשלום אונליין</p>
+          {!loading && (error || unavailable) && (
+            <p role="alert">
+              {error ||
+                "יש בסל פריטים שאינם זמינים. עדכנו אותם כדי להמשיך להזמנה."}
+            </p>
+          )}
           {!!cart.length && (
-            <Link
+            <button
               className="primary checkout-link"
-              href="/checkout"
-              onClick={close}
+              disabled={loading || checking || !!error || unavailable}
+              onClick={checkout}
             >
-              להמשך ההזמנה ←
-            </Link>
+              {checking ? "בודקים מלאי…" : "להמשך ההזמנה ←"}
+            </button>
           )}
           <button className="primary continue-shopping" onClick={close}>
             להמשיך לבחור דגים <Icon name="chevron" />

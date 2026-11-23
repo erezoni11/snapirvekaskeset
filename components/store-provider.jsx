@@ -9,9 +9,9 @@ import {
 } from "react";
 import { browserServices, readCart, asset } from "@/lib/store";
 import { usePathname } from "next/navigation";
+import { availableProduct, fitsStock } from "@/lib/product-availability";
 import {
   selectionPrice,
-  stockQuantity,
   weightLabel,
   validSelection,
 } from "@/lib/product-pricing";
@@ -30,10 +30,10 @@ export function StoreProvider({ children }) {
   const previewRef = useRef(false),
     dbRef = useRef(null),
     requestRef = useRef(0);
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async ({ background = false } = {}) => {
     if (!dbRef.current) return [];
     const id = ++requestRef.current;
-    setLoading(true);
+    if (!background) setLoading(true);
     setError("");
     try {
       const { data, error: problem } = await dbRef.current
@@ -86,7 +86,14 @@ export function StoreProvider({ children }) {
       if (document.visibilityState === "visible") refresh();
     };
     document.addEventListener("visibilitychange", visible);
-    return () => document.removeEventListener("visibilitychange", visible);
+    const timer = setInterval(() => {
+      if (document.visibilityState === "visible" && !previewRef.current)
+        refresh({ background: true });
+    }, 30000);
+    return () => {
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", visible);
+    };
   }, [refresh]);
   const key = services?.local ? "snapir-cart-local-v1" : "snapir-cart-v1";
   useEffect(() => {
@@ -127,50 +134,51 @@ export function StoreProvider({ children }) {
       parent.postMessage({ type: "svk-preview-ready" }, location.origin);
     return () => window.removeEventListener("message", receive);
   }, []);
-  const add = useCallback((product, weight, cut, amount, packing = "") => {
-    if (!validSelection(product.data, weight, cut)) return;
-    setCart((current) => {
-      const existing = current.find(
-        (i) =>
-          i.productId === product.id &&
-          i.weightKg === weight &&
-          i.cut === cut &&
-          (i.packing || "") === packing,
-      );
-      const quantity = (existing?.amount || 0) + amount;
+  const add = useCallback(
+    async (product, weight, cut, amount, packing = "") => {
+      if (previewRef.current) return false;
+      const fresh = await refresh({ background: true });
+      product = availableProduct(fresh || [], product.id);
       if (
-        quantity > 99 ||
-        current
-          .filter((i) => i.productId === product.id)
-          .reduce(
-            (n, i) => n + stockQuantity(product.data, i.weightKg, i.amount),
-            0,
-          ) +
-          stockQuantity(product.data, weight, amount) >
-          Number(product.available_kg || 0)
+        !product ||
+        !validSelection(product.data, weight, cut) ||
+        !fitsStock(product, cart, weight, amount)
       )
-        return current;
-      if (existing)
-        return current.map((i) =>
-          i === existing ? { ...i, amount: quantity } : i,
+        return false;
+      setCart((current) => {
+        const existing = current.find(
+          (i) =>
+            i.productId === product.id &&
+            i.weightKg === weight &&
+            i.cut === cut &&
+            (i.packing || "") === packing,
         );
-      return [
-        ...current,
-        {
-          productId: product.id,
-          name: product.data.title,
-          weightKg: weight,
-          weight: weightLabel(product.data, weight),
-          cut,
-          packing,
-          amount,
-          image: asset(product.data.image),
-          unitPrice: selectionPrice(product.data, weight, cut),
-        },
-      ];
-    });
-    setCartOpen(true);
-  }, []);
+        const quantity = (existing?.amount || 0) + amount;
+        if (quantity > 99 || !fitsStock(product, current, weight, amount))
+          return current;
+        if (existing)
+          return current.map((i) =>
+            i === existing ? { ...i, amount: quantity } : i,
+          );
+        return [
+          ...current,
+          {
+            productId: product.id,
+            name: product.data.title,
+            weightKg: weight,
+            weight: weightLabel(product.data, weight),
+            cut,
+            packing,
+            amount,
+            image: asset(product.data.image),
+            unitPrice: selectionPrice(product.data, weight, cut),
+          },
+        ];
+      });
+      setCartOpen(true);
+    },
+    [refresh, cart],
+  );
   const activeDocs = docs.filter((d) => d.data && d.data.active !== false);
   const settings =
     activeDocs.find((d) => d.kind === "settings" && d.slug === "main")?.data ||
