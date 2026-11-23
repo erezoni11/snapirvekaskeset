@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useStore } from "./store-provider";
+import "./admin-theme.css";
 export default function AdminView() {
   const { db, local, ready } = useStore(),
     root = useRef(null);
@@ -143,12 +144,19 @@ export default function AdminView() {
 
           <main className="admin-main">
             <div className="admin-page-heading">
-              <div>
-                <p id="section-eyebrow" className="eyebrow">
-                  {"מבט על החנות"}
-                </p>
-                <h1 id="section-title">{"סקירה כללית"}</h1>
-                <p id="section-description"></p>
+              <div className="admin-heading-title">
+                <span
+                  id="section-art"
+                  className="admin-section-art"
+                  aria-hidden="true"
+                ></span>
+                <div className="admin-heading-copy">
+                  <p id="section-eyebrow" className="eyebrow">
+                    {"מבט על החנות"}
+                  </p>
+                  <h1 id="section-title">{"סקירה כללית"}</h1>
+                  <p id="section-description"></p>
+                </div>
               </div>
               <div id="section-actions" className="section-actions"></div>
             </div>
@@ -177,7 +185,12 @@ export default function AdminView() {
       >
         <form id="editor-form">
           <header className="editor-heading">
-            <div>
+            <span
+              id="editor-art"
+              className="editor-art"
+              aria-hidden="true"
+            ></span>
+            <div className="editor-heading-copy">
               <p className="eyebrow" id="editor-context">
                 {"עריכת טיוטה"}
               </p>
@@ -200,6 +213,37 @@ export default function AdminView() {
             </button>
             <button type="submit" className="admin-primary" id="save-editor">
               {"שמירת טיוטה"}
+            </button>
+          </footer>
+        </form>
+      </dialog>
+
+      <dialog
+        id="admin-confirm-dialog"
+        className="admin-confirm-dialog"
+        aria-labelledby="confirm-title"
+        aria-describedby="confirm-message"
+      >
+        <form method="dialog" id="admin-confirm-form">
+          <div
+            className="confirm-art"
+            id="confirm-art"
+            aria-hidden="true"
+          ></div>
+          <p className="eyebrow">{"לפני שממשיכים"}</p>
+          <h2 id="confirm-title"></h2>
+          <p id="confirm-message"></p>
+          <footer>
+            <button
+              type="button"
+              className="admin-secondary"
+              id="confirm-cancel"
+              autoFocus
+            >
+              {"חזרה"}
+            </button>
+            <button type="submit" className="admin-primary" id="confirm-accept">
+              {"אישור"}
             </button>
           </footer>
         </form>

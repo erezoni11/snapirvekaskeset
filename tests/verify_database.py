@@ -35,7 +35,17 @@ try:
         create schema storage; create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);
         create table storage.objects(id uuid,bucket_id text); alter table storage.objects enable row level security;""")
         for migration in sorted((ROOT/'supabase/migrations').glob('*.sql')):
+            if migration.name.endswith('_order_stage_timing.sql'):
+                legacy_customer=query("insert into public.svk_customers(name,phone) values('Legacy timing test','000') returning id")[0]['id']
+                query("insert into public.svk_orders(customer_id,items,total_cents,shipping_cents,shipping_name,address,status,created_at) values($1,'[]',0,0,'Pickup','','new',now()-interval '2 hours'),($1,'[]',0,0,'Pickup','','processing',now()-interval '3 hours')",[legacy_customer])
             execute(migration.read_text(encoding='utf-8'))
+            if migration.name.endswith('_order_stage_timing.sql'):
+                legacy=query('select status,created_at,status_entered_at from public.svk_orders where customer_id=$1 order by status',[legacy_customer])
+                assert legacy[0]['status']=='new' and legacy[0]['status_entered_at']==legacy[0]['created_at']
+                assert legacy[1]['status']=='processing' and legacy[1]['status_entered_at'] is None
+                query('delete from public.svk_orders where customer_id=$1',[legacy_customer])
+                query('delete from public.svk_customers where id=$1',[legacy_customer])
+                print('PASS: order timing migration backfills only known new-order times; historical stage times stay unknown')
         ids = {role:str(uuid.uuid4()) for role in ['admin','content','shop','orders','outsider']}
         for role, user_id in ids.items():
             query('insert into auth.users(id) values($1)',[user_id])
@@ -81,6 +91,17 @@ try:
         args=[customer,json.dumps([{'product_id':product['id'],'quantity_kg':1.5,'cut':'whole'}]),shipment['id'],'Test address','',order_id]
         order_sql='select public.svk_create_order($1::uuid,$2::jsonb,$3::uuid,$4,$5,$6::uuid)'
         query(order_sql,args);query(order_sql,args)
+        timing=query('select created_at,status_entered_at from public.svk_orders where id=$1',[order_id])[0]
+        assert timing['status_entered_at']==timing['created_at']
+        query("select public.svk_order_status($1::uuid,'new','Courier details')",[order_id])
+        assert query('select status_entered_at from public.svk_orders where id=$1',[order_id])[0]['status_entered_at']==timing['status_entered_at']
+        query("select public.svk_order_status($1::uuid,'processing')",[order_id])
+        changed=query('select status_entered_at from public.svk_orders where id=$1',[order_id])[0]['status_entered_at']
+        assert changed>timing['status_entered_at']
+        query("select public.svk_order_status($1::uuid,'processing','Updated courier')",[order_id])
+        assert query('select status_entered_at from public.svk_orders where id=$1',[order_id])[0]['status_entered_at']==changed
+        denied("update public.svk_orders set status_entered_at=now() where id=$1",[order_id])
+        print('PASS: server-owned order stage timestamps advance on transition, survive retries/detail edits and cannot be written directly by staff')
         assert query('select count(*)::int as n from public.svk_orders')[0]['n']==1
         assert query('select total_cents::int as total from public.svk_orders')[0]['total']==13235
         def stock():
