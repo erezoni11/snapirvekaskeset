@@ -2,18 +2,23 @@
 import { useState } from "react";
 import { useStore } from "./store-provider";
 import ProductCard from "./product-card";
+import Icon from "./icon";
+import { matchesProductSearch, searchWords } from "@/lib/product-search";
 export default function ProductGrid({ category, home = false }) {
-  const { docs, categories, search, loading, error, refresh } = useStore(),
+  const { docs, categories, search, setSearch, loading, error, refresh } =
+      useStore(),
     [sort, setSort] = useState("recommended"),
     [homeCategory, setHomeCategory] = useState("all");
+  const words = searchWords(search);
   const products = docs.filter(
     (d) =>
       d.kind === "products" &&
       categories.some((c) => c.slug === d.data.category) &&
-      (home ? d.data.featured : d.data.category === category) &&
+      (home
+        ? words.length > 0 || d.data.featured
+        : d.data.category === category) &&
       (!home || homeCategory === "all" || d.data.category === homeCategory) &&
-      (!search ||
-        `${d.data.title} ${d.data.description || ""}`.includes(search)),
+      matchesProductSearch(d.data, words),
   );
   if (sort === "price-up")
     products.sort((a, b) => a.data.price_cents - b.data.price_cents);
@@ -40,6 +45,30 @@ export default function ProductGrid({ category, home = false }) {
             ),
           )}
         </nav>
+      )}
+      {home && (
+        <div className="product-search">
+          <label htmlFor="home-product-search">חיפוש במבחר שלנו</label>
+          <div className="product-search-field">
+            <Icon name="search" />
+            <input
+              id="home-product-search"
+              type="search"
+              placeholder="למשל: סלמון, דניס או מעושן"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            {search && (
+              <button
+                type="button"
+                aria-label="ניקוי החיפוש"
+                onClick={() => setSearch("")}
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
       )}
       {!home && (
         <div className="catalog-toolbar">
@@ -72,13 +101,22 @@ export default function ProductGrid({ category, home = false }) {
         </p>
       ) : (
         <>
+          {words.length > 0 && (
+            <p className="catalog-count search-results-count" role="status">
+              {products.length} מוצרים נמצאו לחיפוש „{search.trim()}”
+            </p>
+          )}
           <div className="product-grid">
             {products.map((p) => (
               <ProductCard key={`${p.id}:${p.version}`} product={p} />
             ))}
           </div>
           {!products.length && (
-            <p className="search-empty">אין מוצרים להצגה כרגע.</p>
+            <p className="search-empty">
+              {words.length
+                ? "לא נמצאו מוצרים. נסו מילה אחרת או נקו את החיפוש."
+                : "אין מוצרים להצגה כרגע."}
+            </p>
           )}
         </>
       )}

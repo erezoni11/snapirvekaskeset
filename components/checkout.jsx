@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { useStore } from "./store-provider";
 import { money, asset } from "@/lib/store";
 import {
-  validSelection,
-  stockQuantity,
-  selectionPrice,
-} from "@/lib/product-pricing";
+  availableProduct,
+  cartItemAvailable,
+} from "@/lib/product-availability";
+import { validSelection, selectionPrice } from "@/lib/product-pricing";
 const blank = {
   name: "",
   phone: "",
@@ -30,24 +30,16 @@ const orderItems = (cart) =>
     ...(i.packing ? { packing: i.packing } : {}),
   }));
 function quote(cart, docs, shipping) {
-  const used = new Map(),
-    lines = [];
+  const lines = [];
   let valid = cart.length > 0,
     subtotal = 0;
   for (const item of cart) {
-    const p = docs.find(
-      (d) =>
-        d.id === item.productId &&
-        d.kind === "products" &&
-        docs.some((c) => c.kind === "categories" && c.slug === d.data.category),
-    );
+    const p = availableProduct(docs, item.productId);
     if (!p || !validSelection(p.data, item.weightKg, item.cut)) {
       valid = false;
       continue;
     }
-    const qty = stockQuantity(p.data, item.weightKg, item.amount);
-    used.set(p.id, (used.get(p.id) || 0) + qty);
-    if (used.get(p.id) > Number(p.available_kg || 0)) valid = false;
+    if (!cartItemAvailable(docs, cart, item)) valid = false;
     const cost = selectionPrice(p.data, item.weightKg, item.cut) * item.amount;
     subtotal += cost;
     lines.push({ item, product: p, cost });

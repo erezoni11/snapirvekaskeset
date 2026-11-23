@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { useStore } from "./store-provider";
 import { asset, categoryRoute } from "@/lib/store";
@@ -17,6 +17,7 @@ export default function Header() {
     loading,
   } = useStore();
   const path = usePathname(),
+    router = useRouter(),
     [open, setOpen] = useState(false),
     dialog = useRef(null);
   useEffect(() => {
@@ -94,8 +95,19 @@ export default function Header() {
         </div>
       </header>
       <dialog id="search-dialog" ref={dialog}>
-        <form method="dialog">
-          <button className="close" aria-label="סגירה">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            dialog.current.close();
+            router.push("/#products");
+          }}
+        >
+          <button
+            type="button"
+            className="close"
+            aria-label="סגירה"
+            onClick={() => dialog.current.close()}
+          >
             ×
           </button>
           <h2>חיפוש מוצרים</h2>
@@ -106,7 +118,9 @@ export default function Header() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button className="primary">הצגת תוצאות</button>
+          <button type="submit" className="primary">
+            הצגת תוצאות
+          </button>
         </form>
       </dialog>
     </>

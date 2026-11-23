@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useStore } from "./store-provider";
 import { asset } from "@/lib/store";
 import Icon from "./icon";
+import { fitsStock } from "@/lib/product-availability";
 import {
   isUnit,
   priceLabel,
   weightLabel,
   rate,
   selectionPrice,
-  stockQuantity,
   validSelection,
 } from "@/lib/product-pricing";
 import { money } from "@/lib/store";
@@ -20,13 +20,9 @@ export default function ProductCard({ product }) {
     [cut, setCut] = useState(p.cuts?.[0] || "שלם"),
     [amount, setAmount] = useState(1),
     [packing, setPacking] = useState(""),
-    [favorite, setFavorite] = useState(false);
-  const reserved = cart
-    .filter((i) => i.productId === product.id)
-    .reduce((n, i) => n + stockQuantity(p, i.weightKg, i.amount), 0);
-  const unavailable =
-    reserved + stockQuantity(p, weight, amount) >
-    Number(product.available_kg || 0);
+    [favorite, setFavorite] = useState(false),
+    [checking, setChecking] = useState(false);
+  const unavailable = !fitsStock(product, cart, weight, amount);
   const valid = validSelection(p, weight, cut);
   return (
     <article
@@ -143,10 +139,19 @@ export default function ProductCard({ product }) {
           </div>
           <button
             className="add-cart primary"
-            disabled={preview || unavailable || !valid}
-            onClick={() => add(product, weight, cut, amount, packing.trim())}
+            disabled={checking || preview || unavailable || !valid}
+            onClick={async () => {
+              setChecking(true);
+              try {
+                await add(product, weight, cut, amount, packing.trim());
+              } finally {
+                setChecking(false);
+              }
+            }}
           >
-            {preview ? (
+            {checking ? (
+              "בודקים מלאי…"
+            ) : preview ? (
               "תצוגה מקדימה"
             ) : p.price_confirmed === false ? (
               "לבירור מול החנות"
